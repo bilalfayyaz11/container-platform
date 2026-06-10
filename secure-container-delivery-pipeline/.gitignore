@@ -1,0 +1,5 @@
+.env
+*.log
+trivy-report.json
+root.json
+health.json

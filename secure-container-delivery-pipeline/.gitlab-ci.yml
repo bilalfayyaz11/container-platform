@@ -1,0 +1,98 @@
+stages:
+  - build
+  - test
+  - scan
+  - deploy
+
+variables:
+  DOCKER_TLS_CERTDIR: ""
+  IMAGE_SHA_TAG: "$CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA"
+
+default:
+  image: docker:27.3.1
+  services:
+    - docker:27.3.1-dind
+  before_script:
+    - docker info
+
+build_image:
+  stage: build
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  script:
+    - export APP_VERSION="$(cat VERSION)"
+    - export IMAGE_VERSION_TAG="$CI_REGISTRY_IMAGE:$APP_VERSION"
+    - echo "$CI_REGISTRY_PASSWORD" | docker login "$CI_REGISTRY" -u "$CI_REGISTRY_USER" --password-stdin
+    - docker build --pull -t "$IMAGE_SHA_TAG" -t "$IMAGE_VERSION_TAG" .
+    - docker push "$IMAGE_SHA_TAG"
+    - docker push "$IMAGE_VERSION_TAG"
+    - echo "Built and pushed $IMAGE_SHA_TAG"
+    - echo "Built and pushed $IMAGE_VERSION_TAG"
+
+test_compose_stack:
+  stage: test
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  before_script:
+    - docker info
+    - apk add --no-cache curl docker-cli-compose jq
+  script:
+    - export APP_VERSION="$(cat VERSION)"
+    - export APP_IMAGE="$CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA"
+    - export APP_NAME="container-cicd-service"
+    - export APP_ENV="ci"
+    - export REDIS_URL="redis://:${REDIS_PASSWORD}@redis:6379/0"
+    - echo "$CI_REGISTRY_PASSWORD" | docker login "$CI_REGISTRY" -u "$CI_REGISTRY_USER" --password-stdin
+    - docker compose up -d
+    - sleep 15
+    - ROOT_STATUS="$(curl -s -o root.json -w "%{http_code}" http://localhost/)"
+    - HEALTH_STATUS="$(curl -s -o health.json -w "%{http_code}" http://localhost/health)"
+    - cat root.json
+    - cat health.json
+    - test "$ROOT_STATUS" = "200"
+    - test "$HEALTH_STATUS" = "200"
+    - jq -e '.request_counter >= 1' root.json
+    - echo "Root endpoint returned HTTP $ROOT_STATUS through Nginx on port 80"
+    - echo "Health endpoint returned HTTP $HEALTH_STATUS through Nginx on port 80"
+  after_script:
+    - docker compose down -v || true
+    - docker volume ls
+
+scan_image:
+  stage: scan
+  image:
+    name: aquasec/trivy:latest
+    entrypoint: [""]
+  services: []
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+  script:
+    - export IMAGE_TO_SCAN="$CI_REGISTRY_IMAGE:$CI_COMMIT_SHORT_SHA"
+    - echo "Scanning image $IMAGE_TO_SCAN"
+    - trivy image --format json --output trivy-report.json "$IMAGE_TO_SCAN"
+    - grep -q '"Results"' trivy-report.json
+  artifacts:
+    when: always
+    paths:
+      - trivy-report.json
+    expire_in: 7 days
+
+deploy_stack:
+  stage: deploy
+  rules:
+    - if: '$CI_COMMIT_BRANCH == "main"'
+      when: manual
+  before_script:
+    - docker info
+    - apk add --no-cache docker-cli-compose
+  script:
+    - export APP_VERSION="$(cat VERSION)"
+    - export APP_IMAGE="$CI_REGISTRY_IMAGE:$APP_VERSION"
+    - export APP_NAME="container-cicd-service"
+    - export APP_ENV="production"
+    - export REDIS_URL="redis://:${REDIS_PASSWORD}@redis:6379/0"
+    - echo "Deploy approval received"
+    - echo "Resolved image tag: $APP_IMAGE"
+    - echo "Semantic version: $APP_VERSION"
+    - docker compose up -d
+    - docker compose ps
