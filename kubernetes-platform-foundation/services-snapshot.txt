@@ -1,0 +1,5 @@
+NAME                         TYPE           CLUSTER-IP       EXTERNAL-IP   PORT(S)        AGE     SELECTOR
+kubernetes                   ClusterIP      10.96.0.1        <none>        443/TCP        3m45s   <none>
+nginx-service-clusterip      ClusterIP      10.111.24.47     <none>        80/TCP         40s     app=nginx
+nginx-service-loadbalancer   LoadBalancer   10.100.213.177   <pending>     80:31699/TCP   38s     app=nginx
+nginx-service-nodeport       NodePort       10.97.165.12     <none>        80:30080/TCP   40s     app=nginx

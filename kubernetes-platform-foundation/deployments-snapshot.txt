@@ -1,0 +1,2 @@
+NAME               READY   UP-TO-DATE   AVAILABLE   AGE   CONTAINERS   IMAGES              SELECTOR
+nginx-deployment   2/2     2            2           44s   nginx        nginx:1.27-alpine   app=nginx

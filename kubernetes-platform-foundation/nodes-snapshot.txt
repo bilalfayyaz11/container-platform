@@ -1,0 +1,2 @@
+NAME       STATUS   ROLES           AGE     VERSION   INTERNAL-IP    EXTERNAL-IP   OS-IMAGE                         KERNEL-VERSION    CONTAINER-RUNTIME
+minikube   Ready    control-plane   3m46s   v1.35.1   192.168.49.2   <none>        Debian GNU/Linux 12 (bookworm)   6.14.0-1018-aws   docker://29.2.1

@@ -1,0 +1,5 @@
+NAME                                READY   STATUS    RESTARTS   AGE   IP            NODE       NOMINATED NODE   READINESS GATES
+multi-container-pod                 2/2     Running   0          48s   10.244.0.5    minikube   <none>           <none>
+nginx-deployment-798dd5959d-4g2cs   1/1     Running   0          15s   10.244.0.14   minikube   <none>           <none>
+nginx-deployment-798dd5959d-tjvqk   1/1     Running   0          13s   10.244.0.15   minikube   <none>           <none>
+nginx-pod                           1/1     Running   0          61s   10.244.0.4    minikube   <none>           <none>

@@ -1,0 +1,100 @@
+LAST SEEN   TYPE     REASON                    OBJECT                                   MESSAGE
+3m44s       Normal   Starting                  node/minikube                            Starting kubelet.
+3m44s       Normal   NodeAllocatableEnforced   node/minikube                            Updated Node Allocatable limit across pods
+3m44s       Normal   NodeHasSufficientMemory   node/minikube                            Node minikube status is now: NodeHasSufficientMemory
+3m44s       Normal   NodeHasNoDiskPressure     node/minikube                            Node minikube status is now: NodeHasNoDiskPressure
+3m44s       Normal   NodeHasSufficientPID      node/minikube                            Node minikube status is now: NodeHasSufficientPID
+3m43s       Normal   NodeReady                 node/minikube                            Node minikube status is now: NodeReady
+3m40s       Normal   RegisteredNode            node/minikube                            Node minikube event: Registered Node minikube in Controller
+3m36s       Normal   Starting                  node/minikube                            
+62s         Normal   RegisteredNode            node/minikube                            Node minikube event: Registered Node minikube in Controller
+62s         Normal   Scheduled                 pod/nginx-pod                            Successfully assigned default/nginx-pod to minikube
+60s         Normal   Starting                  node/minikube                            
+53s         Normal   Pulling                   pod/nginx-pod                            Pulling image "nginx:1.27-alpine"
+50s         Normal   Started                   pod/nginx-pod                            Container started
+50s         Normal   Pulled                    pod/nginx-pod                            Successfully pulled image "nginx:1.27-alpine" in 2.319s (2.319s including waiting). Image size: 48239342 bytes.
+50s         Normal   Created                   pod/nginx-pod                            Container created
+49s         Normal   Scheduled                 pod/multi-container-pod                  Successfully assigned default/multi-container-pod to minikube
+48s         Normal   Pulling                   pod/multi-container-pod                  Pulling image "redis:7.4-alpine"
+48s         Normal   Started                   pod/multi-container-pod                  Container started
+48s         Normal   Created                   pod/multi-container-pod                  Container created
+48s         Normal   Pulled                    pod/multi-container-pod                  Container image "nginx:1.27-alpine" already present on machine and can be accessed by the pod
+46s         Normal   Created                   pod/multi-container-pod                  Container created
+46s         Normal   Started                   pod/multi-container-pod                  Container started
+46s         Normal   Pulled                    pod/multi-container-pod                  Successfully pulled image "redis:7.4-alpine" in 1.645s (1.645s including waiting). Image size: 39088753 bytes.
+45s         Normal   Scheduled                 pod/nginx-deployment-798dd5959d-fl699    Successfully assigned default/nginx-deployment-798dd5959d-fl699 to minikube
+45s         Normal   SuccessfulCreate          replicaset/nginx-deployment-798dd5959d   Created pod: nginx-deployment-798dd5959d-fl699
+45s         Normal   SuccessfulCreate          replicaset/nginx-deployment-798dd5959d   Created pod: nginx-deployment-798dd5959d-8qpk4
+45s         Normal   Scheduled                 pod/nginx-deployment-798dd5959d-8qpk4    Successfully assigned default/nginx-deployment-798dd5959d-8qpk4 to minikube
+45s         Normal   SuccessfulCreate          replicaset/nginx-deployment-798dd5959d   Created pod: nginx-deployment-798dd5959d-5s475
+45s         Normal   ScalingReplicaSet         deployment/nginx-deployment              Scaled up replica set nginx-deployment-798dd5959d from 0 to 3
+45s         Normal   Scheduled                 pod/nginx-deployment-798dd5959d-5s475    Successfully assigned default/nginx-deployment-798dd5959d-5s475 to minikube
+44s         Normal   Pulled                    pod/nginx-deployment-798dd5959d-fl699    Container image "nginx:1.27-alpine" already present on machine and can be accessed by the pod
+44s         Normal   Pulled                    pod/nginx-deployment-798dd5959d-8qpk4    Container image "nginx:1.27-alpine" already present on machine and can be accessed by the pod
+44s         Normal   Created                   pod/nginx-deployment-798dd5959d-fl699    Container created
+44s         Normal   Created                   pod/nginx-deployment-798dd5959d-8qpk4    Container created
+43s         Normal   Pulled                    pod/nginx-deployment-798dd5959d-5s475    Container image "nginx:1.27-alpine" already present on machine and can be accessed by the pod
+43s         Normal   Started                   pod/nginx-deployment-798dd5959d-fl699    Container started
+43s         Normal   Started                   pod/nginx-deployment-798dd5959d-8qpk4    Container started
+43s         Normal   Started                   pod/nginx-deployment-798dd5959d-5s475    Container started
+43s         Normal   Created                   pod/nginx-deployment-798dd5959d-5s475    Container created
+39s         Normal   Scheduled                 pod/nginx-deployment-798dd5959d-lvv8z    Successfully assigned default/nginx-deployment-798dd5959d-lvv8z to minikube
+39s         Normal   Killing                   pod/nginx-deployment-798dd5959d-5s475    Stopping container nginx
+39s         Normal   SuccessfulCreate          replicaset/nginx-deployment-798dd5959d   Created pod: nginx-deployment-798dd5959d-lvv8z
+38s         Normal   Pulled                    pod/nginx-deployment-798dd5959d-lvv8z    Container image "nginx:1.27-alpine" already present on machine and can be accessed by the pod
+38s         Normal   Created                   pod/nginx-deployment-798dd5959d-lvv8z    Container created
+38s         Normal   Started                   pod/nginx-deployment-798dd5959d-lvv8z    Container started
+27s         Normal   SuccessfulCreate          replicaset/nginx-deployment-798dd5959d   Created pod: nginx-deployment-798dd5959d-xp4r7
+27s         Normal   Scheduled                 pod/nginx-deployment-798dd5959d-nsbsl    Successfully assigned default/nginx-deployment-798dd5959d-nsbsl to minikube
+27s         Normal   SuccessfulCreate          replicaset/nginx-deployment-798dd5959d   Created pod: nginx-deployment-798dd5959d-nsbsl
+27s         Normal   ScalingReplicaSet         deployment/nginx-deployment              Scaled up replica set nginx-deployment-798dd5959d from 3 to 5
+27s         Normal   Scheduled                 pod/nginx-deployment-798dd5959d-xp4r7    Successfully assigned default/nginx-deployment-798dd5959d-xp4r7 to minikube
+26s         Normal   Created                   pod/nginx-deployment-798dd5959d-nsbsl    Container created
+26s         Normal   Started                   pod/nginx-deployment-798dd5959d-nsbsl    Container started
+26s         Normal   Pulled                    pod/nginx-deployment-798dd5959d-xp4r7    Container image "nginx:1.27-alpine" already present on machine and can be accessed by the pod
+26s         Normal   Created                   pod/nginx-deployment-798dd5959d-xp4r7    Container created
+26s         Normal   Started                   pod/nginx-deployment-798dd5959d-xp4r7    Container started
+27s         Normal   Pulled                    pod/nginx-deployment-798dd5959d-nsbsl    Container image "nginx:1.27-alpine" already present on machine and can be accessed by the pod
+25s         Normal   SuccessfulDelete          replicaset/nginx-deployment-798dd5959d   Deleted pod: nginx-deployment-798dd5959d-lvv8z
+25s         Normal   ScalingReplicaSet         deployment/nginx-deployment              Scaled down replica set nginx-deployment-798dd5959d from 5 to 2
+25s         Normal   Killing                   pod/nginx-deployment-798dd5959d-lvv8z    Stopping container nginx
+25s         Normal   SuccessfulDelete          replicaset/nginx-deployment-798dd5959d   Deleted pod: nginx-deployment-798dd5959d-nsbsl
+25s         Normal   SuccessfulDelete          replicaset/nginx-deployment-798dd5959d   Deleted pod: nginx-deployment-798dd5959d-xp4r7
+24s         Normal   ScalingReplicaSet         deployment/nginx-deployment              Scaled up replica set nginx-deployment-7c4b74768 from 0 to 1
+24s         Normal   SuccessfulCreate          replicaset/nginx-deployment-7c4b74768    Created pod: nginx-deployment-7c4b74768-trwtg
+24s         Normal   Scheduled                 pod/nginx-deployment-7c4b74768-trwtg     Successfully assigned default/nginx-deployment-7c4b74768-trwtg to minikube
+23s         Normal   Killing                   pod/nginx-deployment-798dd5959d-nsbsl    Stopping container nginx
+23s         Normal   Killing                   pod/nginx-deployment-798dd5959d-xp4r7    Stopping container nginx
+23s         Normal   Pulling                   pod/nginx-deployment-7c4b74768-trwtg     Pulling image "nginx:1.25-alpine"
+20s         Normal   Created                   pod/nginx-deployment-7c4b74768-trwtg     Container created
+20s         Normal   Started                   pod/nginx-deployment-7c4b74768-trwtg     Container started
+20s         Normal   Pulled                    pod/nginx-deployment-7c4b74768-trwtg     Successfully pulled image "nginx:1.25-alpine" in 2.765s (2.765s including waiting). Image size: 48299388 bytes.
+19s         Normal   Killing                   pod/nginx-deployment-798dd5959d-8qpk4    Stopping container nginx
+19s         Normal   ScalingReplicaSet         deployment/nginx-deployment              Scaled down replica set nginx-deployment-798dd5959d from 2 to 1
+19s         Normal   SuccessfulDelete          replicaset/nginx-deployment-798dd5959d   Deleted pod: nginx-deployment-798dd5959d-8qpk4
+18s         Normal   ScalingReplicaSet         deployment/nginx-deployment              Scaled up replica set nginx-deployment-7c4b74768 from 1 to 2
+18s         Normal   Scheduled                 pod/nginx-deployment-7c4b74768-x59w9     Successfully assigned default/nginx-deployment-7c4b74768-x59w9 to minikube
+18s         Normal   Pulled                    pod/nginx-deployment-7c4b74768-x59w9     Container image "nginx:1.25-alpine" already present on machine and can be accessed by the pod
+18s         Normal   Created                   pod/nginx-deployment-7c4b74768-x59w9     Container created
+18s         Normal   SuccessfulCreate          replicaset/nginx-deployment-7c4b74768    Created pod: nginx-deployment-7c4b74768-x59w9
+17s         Normal   Started                   pod/nginx-deployment-7c4b74768-x59w9     Container started
+16s         Normal   ScalingReplicaSet         deployment/nginx-deployment              Scaled up replica set nginx-deployment-798dd5959d from 0 to 1
+16s         Normal   Scheduled                 pod/nginx-deployment-798dd5959d-4g2cs    Successfully assigned default/nginx-deployment-798dd5959d-4g2cs to minikube
+16s         Normal   SuccessfulDelete          replicaset/nginx-deployment-798dd5959d   Deleted pod: nginx-deployment-798dd5959d-fl699
+16s         Normal   Killing                   pod/nginx-deployment-798dd5959d-fl699    Stopping container nginx
+16s         Normal   ScalingReplicaSet         deployment/nginx-deployment              Scaled down replica set nginx-deployment-798dd5959d from 1 to 0
+16s         Normal   SuccessfulCreate          replicaset/nginx-deployment-798dd5959d   Created pod: nginx-deployment-798dd5959d-4g2cs
+15s         Normal   Pulled                    pod/nginx-deployment-798dd5959d-4g2cs    Container image "nginx:1.27-alpine" already present on machine and can be accessed by the pod
+15s         Normal   Started                   pod/nginx-deployment-798dd5959d-4g2cs    Container started
+15s         Normal   Created                   pod/nginx-deployment-798dd5959d-4g2cs    Container created
+14s         Normal   ScalingReplicaSet         deployment/nginx-deployment              Scaled down replica set nginx-deployment-7c4b74768 from 2 to 1
+14s         Normal   SuccessfulCreate          replicaset/nginx-deployment-798dd5959d   Created pod: nginx-deployment-798dd5959d-tjvqk
+14s         Normal   Scheduled                 pod/nginx-deployment-798dd5959d-tjvqk    Successfully assigned default/nginx-deployment-798dd5959d-tjvqk to minikube
+12s         Normal   ScalingReplicaSet         deployment/nginx-deployment              (combined from similar events): Scaled down replica set nginx-deployment-7c4b74768 from 1 to 0
+14s         Normal   SuccessfulDelete          replicaset/nginx-deployment-7c4b74768    Deleted pod: nginx-deployment-7c4b74768-x59w9
+14s         Normal   Killing                   pod/nginx-deployment-7c4b74768-x59w9     Stopping container nginx
+13s         Normal   Pulled                    pod/nginx-deployment-798dd5959d-tjvqk    Container image "nginx:1.27-alpine" already present on machine and can be accessed by the pod
+13s         Normal   Created                   pod/nginx-deployment-798dd5959d-tjvqk    Container created
+13s         Normal   Started                   pod/nginx-deployment-798dd5959d-tjvqk    Container started
+12s         Normal   Killing                   pod/nginx-deployment-7c4b74768-trwtg     Stopping container nginx
+12s         Normal   SuccessfulDelete          replicaset/nginx-deployment-7c4b74768    Deleted pod: nginx-deployment-7c4b74768-trwtg
