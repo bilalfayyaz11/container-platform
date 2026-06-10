@@ -5,3 +5,4 @@
 | 1 | [Optimized and hardened Node.js container image workflow](./nodejs-image-optimization-hardening) | Docker, Node.js, Alpine Linux, multi-stage builds, container security | Advanced |
 | 2 | [Docker container debugging and runtime diagnostics workflow](./container-debugging-workflows) | Docker, Python, container logs, exec, networking, resource monitoring | Intermediate |
 | 3 | [Docker Swarm service orchestration workflow](./docker-swarm-orchestration) | Docker Swarm, Docker Stack, Nginx, Redis, overlay networking | Intermediate |
+| 4 | [Docker custom network segmentation and service discovery](./docker-custom-networking) | Docker networking, bridge networks, DNS, MySQL, Nginx, iptables | Advanced |
