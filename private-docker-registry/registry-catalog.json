@@ -1,0 +1,7 @@
+{
+  "repositories": [
+    "my-custom-app",
+    "my-nginx",
+    "test-alpine"
+  ]
+}

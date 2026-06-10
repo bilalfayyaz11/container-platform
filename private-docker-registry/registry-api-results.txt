@@ -1,0 +1,14 @@
+=== Docker Registry API Testing ===
+{
+  "repositories": [
+    "my-custom-app",
+    "my-nginx"
+  ]
+}
+{
+  "name": "my-nginx",
+  "tags": [
+    "v1.0"
+  ]
+}
+null

@@ -1,0 +1,19 @@
+=== Registry Monitoring Report ===
+Date: Wed Jun 10 23:40:23 UTC 2026
+
+Registry Container Status:
+47639a5f42e1   registry:2   "/entrypoint.sh /etc…"   9 seconds ago   Up 8 seconds   0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp   registry-configured
+
+Registry Storage Usage:
+27M	/opt/docker-registry/data
+
+Registry Repositories:
+my-custom-app
+my-nginx
+
+Docker System Information:
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          5         1         139.5MB   22MB (15%)
+Containers      1         1         28.67kB   0B (0%)
+Local Volumes   0         0         0B        0B
+Build Cache     5         0         21.14MB   12.29kB

@@ -1,0 +1,4 @@
+registry-configured
+registry-configured
+Backup created: /opt/docker-registry/backups/registry_backup_20260610_234023.tar.gz
+26M	/opt/docker-registry/backups/registry_backup_20260610_234023.tar.gz

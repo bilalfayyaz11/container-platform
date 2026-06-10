@@ -1,0 +1,2 @@
+Docker Content Trust verification was tested against a local authenticated registry.
+Unsigned local registry images fail when content trust is enforced and work when content trust is disabled.

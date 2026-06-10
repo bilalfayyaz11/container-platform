@@ -1,0 +1,8 @@
+IMAGE                                 ID             DISK USAGE   CONTENT SIZE   EXTRA
+alpine:3.20                           d9e853e87e55       12.2MB         3.71MB        
+localhost:5000/hello-world:latest     d1a8d0a4eeb6       20.4kB         4.01kB        
+localhost:5000/my-custom-app:latest   ba82738e5642       21.1MB         6.23MB        
+localhost:5000/my-nginx:v1.0          62223d644fa2       73.6MB           21MB        
+localhost:5000/test-alpine:latest     c64c687cbea9       12.1MB         3.63MB        
+nginx:1.27-alpine                     65645c7bb6a0       74.5MB         21.9MB        
+registry:2                            a3d8aaa63ed8       37.4MB         10.3MB   U    
