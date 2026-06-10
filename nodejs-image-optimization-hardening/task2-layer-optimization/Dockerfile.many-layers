@@ -1,0 +1,15 @@
+FROM node:18-alpine
+RUN apk update
+RUN apk add --no-cache curl
+RUN apk add --no-cache git
+RUN mkdir -p /app
+RUN mkdir -p /app/logs
+RUN mkdir -p /app/temp
+WORKDIR /app
+COPY package.json .
+COPY app.js .
+RUN npm install --omit=dev
+RUN npm cache clean --force
+RUN rm -rf /tmp/*
+EXPOSE 3000
+CMD ["npm", "start"]

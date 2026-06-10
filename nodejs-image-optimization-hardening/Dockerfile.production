@@ -1,0 +1,29 @@
+FROM node:18-alpine AS builder
+WORKDIR /app
+COPY package*.json ./
+RUN npm install --omit=dev && npm cache clean --force
+COPY . .
+
+FROM node:18-alpine AS production
+LABEL version="1.0.0" \
+      description="Production-ready Node.js application"
+RUN apk update && \
+    apk upgrade && \
+    apk add --no-cache dumb-init curl tini && \
+    rm -rf /var/cache/apk/* /tmp/*
+RUN addgroup -g 1001 -S appgroup && \
+    adduser -S appuser -u 1001 -G appgroup
+WORKDIR /app
+COPY --chown=appuser:appgroup package*.json ./
+RUN npm install --omit=dev && \
+    npm cache clean --force && \
+    rm -rf /tmp/* /root/.npm
+COPY --from=builder --chown=appuser:appgroup /app/app.js ./
+RUN chmod 755 /app && \
+    find /app -type f -exec chmod 644 {} \;
+USER appuser
+EXPOSE 3000
+HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
+    CMD curl -f http://localhost:3000/health || exit 1
+ENTRYPOINT ["tini", "--"]
+CMD ["node", "app.js"]
