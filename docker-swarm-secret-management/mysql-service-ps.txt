@@ -1,0 +1,6 @@
+ID             NAME             IMAGE       NODE               DESIRED STATE   CURRENT STATE           ERROR                       PORTS
+zjnk6q4k8zow   mysql_db.1       mysql:8.0   ip-172-31-10-136   Ready           Ready 2 seconds ago                                 
+rmi1vis4tgiu    \_ mysql_db.1   mysql:8.0   ip-172-31-10-136   Shutdown        Failed 2 seconds ago    "task: non-zero exit (1)"   
+prj8jg5dzld9    \_ mysql_db.1   mysql:8.0   ip-172-31-10-136   Shutdown        Failed 8 seconds ago    "task: non-zero exit (1)"   
+l6t0h79y73yb    \_ mysql_db.1   mysql:8.0   ip-172-31-10-136   Shutdown        Failed 14 seconds ago   "task: non-zero exit (1)"   
+e8ds5yqjfq24    \_ mysql_db.1   mysql:8.0   ip-172-31-10-136   Shutdown        Failed 20 seconds ago   "task: non-zero exit (1)"   

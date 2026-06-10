@@ -1,0 +1,7 @@
+ID             NAME            IMAGE               NODE               DESIRED STATE   CURRENT STATE                 ERROR     PORTS
+8i9qukmnkl6g   web_app.1       nginx:1.27-alpine   ip-172-31-10-136   Running         Running about a minute ago              
+nin5vxx7px19    \_ web_app.1   nginx:1.27-alpine   ip-172-31-10-136   Shutdown        Shutdown about a minute ago             
+6b2h5n3yb1vq   web_app.2       nginx:1.27-alpine   ip-172-31-10-136   Running         Running about a minute ago              
+lilnojo9fmpr    \_ web_app.2   nginx:1.27-alpine   ip-172-31-10-136   Shutdown        Shutdown about a minute ago             
+4zplchginusn   web_app.3       nginx:1.27-alpine   ip-172-31-10-136   Running         Running about a minute ago              
+yq5ogarh1o7j    \_ web_app.3   nginx:1.27-alpine   ip-172-31-10-136   Shutdown        Shutdown about a minute ago             

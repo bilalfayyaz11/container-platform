@@ -1,0 +1,39 @@
+
+ID:		unuu7yatdjb0j8px7785gaeo4
+Name:		mysql_db
+Service Mode:	Replicated
+ Replicas:	1
+UpdateStatus:
+ State:		paused
+ Started:	38 seconds ago
+ Message:	update paused due to failure or early termination of task h994dabysgbyd4nqcpuu9nqac
+Placement:
+UpdateConfig:
+ Parallelism:	1
+ On failure:	pause
+ Monitoring Period: 5s
+ Max failure ratio: 0
+ Update order:      stop-first
+RollbackConfig:
+ Parallelism:	1
+ On failure:	pause
+ Monitoring Period: 5s
+ Max failure ratio: 0
+ Rollback order:    stop-first
+ContainerSpec:
+ Image:		mysql:8.0@sha256:7dcddc01f13bab2f15cde676d44d01f61fc9f99fe7785e86196dfc07d358ae2b
+ Env:		MYSQL_PASSWORD_FILE=/run/secrets/db_password MYSQL_DATABASE=testdb MYSQL_ROOT_PASSWORD_FILE=/run/secrets/db_password_v2 MYSQL_USER_FILE=/run/secrets/db_username 
+ Init:		false
+Secrets:
+ Target:	db_username
+  Source:	db_username
+ Target:	db_password_v2
+  Source:	db_password_v2
+Resources:
+Endpoint Mode:	vip
+Ports:
+ PublishedPort = 3306
+  Protocol = tcp
+  TargetPort = 3306
+  PublishMode = ingress 
+

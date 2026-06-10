@@ -1,0 +1,44 @@
+
+ID:		z91wgpw31sbbreaf114btfj4z
+Name:		web_app
+Service Mode:	Replicated
+ Replicas:	3
+UpdateStatus:
+ State:		completed
+ Started:	About a minute ago
+ Completed:	About a minute ago
+ Message:	update completed
+Placement:
+UpdateConfig:
+ Parallelism:	1
+ On failure:	pause
+ Monitoring Period: 5s
+ Max failure ratio: 0
+ Update order:      stop-first
+RollbackConfig:
+ Parallelism:	1
+ On failure:	pause
+ Monitoring Period: 5s
+ Max failure ratio: 0
+ Rollback order:    stop-first
+ContainerSpec:
+ Image:		nginx:1.27-alpine@sha256:65645c7bb6a0661892a8b03b89d0743208a18dd2f3f17a54ef4b76fb8e2f2a10
+ Env:		DB_USERNAME_FILE=/run/secrets/db_username DB_PASSWORD_FILE=/run/secrets/db_password DB_CONFIG_FILE=/run/secrets/db_config API_KEY_FILE=/run/secrets/api_key 
+ Init:		false
+Secrets:
+ Target:	db_username
+  Source:	db_username
+ Target:	db_password
+  Source:	db_password
+ Target:	db_config
+  Source:	db_config
+ Target:	api_key_v2
+  Source:	api_key_v2
+Resources:
+Endpoint Mode:	vip
+Ports:
+ PublishedPort = 8080
+  Protocol = tcp
+  TargetPort = 80
+  PublishMode = ingress 
+

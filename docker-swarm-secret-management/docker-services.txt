@@ -1,0 +1,4 @@
+ID             NAME         MODE         REPLICAS   IMAGE               PORTS
+o3tyf4hxrcjf   custom_app   replicated   1/1        nginx:1.27-alpine   *:9090->80/tcp
+unuu7yatdjb0   mysql_db     replicated   0/1        mysql:8.0           *:3306->3306/tcp
+z91wgpw31sbb   web_app      replicated   3/3        nginx:1.27-alpine   *:8080->80/tcp

@@ -1,0 +1,2 @@
+ID                            HOSTNAME           STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+p4f75xt8fw0a2jkynzdvrvrao *   ip-172-31-10-136   Ready     Active         Leader           29.5.3
