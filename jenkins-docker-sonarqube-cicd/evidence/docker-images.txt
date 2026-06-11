@@ -1,0 +1,5 @@
+IMAGE                              ID             DISK USAGE   CONTENT SIZE   EXTRA
+container-cicd-jenkins:lts         28ae50662ad7       1.32GB          458MB   U    
+container-cicd-node-service:v1.0   1f004e71763f        241MB         59.4MB        
+node:22-alpine                     9385cd9f3001        230MB         57.8MB        
+sonarqube:lts-community            f709975ab31d       1.02GB          398MB   U    

@@ -1,0 +1,103 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_IMAGE = 'container-cicd-node-service'
+        DOCKER_TAG = "${BUILD_NUMBER}"
+        TEST_CONTAINER = "container-cicd-test-${BUILD_NUMBER}"
+        PROD_CONTAINER = 'container-cicd-prod'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                sh '''
+                    echo "Workspace:"
+                    pwd
+                    echo "Files:"
+                    ls -la
+                '''
+            }
+        }
+
+        stage('Install Dependencies') {
+            steps {
+                sh '''
+                    npm ci
+                    npm test
+                '''
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                sh '''
+                    docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} .
+                    docker build -t ${DOCKER_IMAGE}:latest .
+                    docker images | grep ${DOCKER_IMAGE}
+                '''
+            }
+        }
+
+        stage('Test Docker Image') {
+            steps {
+                sh '''
+                    docker rm -f ${TEST_CONTAINER} 2>/dev/null || true
+
+                    docker run -d \
+                      --name ${TEST_CONTAINER} \
+                      -p 3001:3000 \
+                      ${DOCKER_IMAGE}:${DOCKER_TAG}
+
+                    sleep 8
+
+                    curl -f http://localhost:3001/health
+                    curl -f http://localhost:3001/
+
+                    docker logs ${TEST_CONTAINER} --tail 20
+                '''
+            }
+            post {
+                always {
+                    sh 'docker rm -f ${TEST_CONTAINER} 2>/dev/null || true'
+                }
+            }
+        }
+
+        stage('Deploy Container') {
+            steps {
+                sh '''
+                    docker rm -f ${PROD_CONTAINER} 2>/dev/null || true
+
+                    docker run -d \
+                      --name ${PROD_CONTAINER} \
+                      -p 3000:3000 \
+                      --restart unless-stopped \
+                      ${DOCKER_IMAGE}:${DOCKER_TAG}
+
+                    sleep 5
+
+                    curl -f http://localhost:3000/health
+                    docker ps --filter "name=${PROD_CONTAINER}"
+                '''
+            }
+        }
+    }
+
+    post {
+        always {
+            sh '''
+                docker images ${DOCKER_IMAGE} --format "{{.Repository}}:{{.Tag}}" | \
+                grep -v latest | \
+                tail -n +6 | \
+                xargs -r docker rmi || true
+            '''
+        }
+        success {
+            echo 'Container CI/CD pipeline completed successfully.'
+        }
+        failure {
+            echo 'Container CI/CD pipeline failed.'
+        }
+    }
+}

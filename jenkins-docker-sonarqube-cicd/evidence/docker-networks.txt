@@ -1,0 +1,5 @@
+NETWORK ID     NAME                                  DRIVER    SCOPE
+a118e4e0396b   bridge                                bridge    local
+000b826c8cba   docker-cicd-automation_cicd-network   bridge    local
+453847445eff   host                                  host      local
+9bbd96370cfe   none                                  null      local

@@ -1,0 +1,5 @@
+DRIVER    VOLUME NAME
+local     docker-cicd-automation_jenkins-home
+local     docker-cicd-automation_sonarqube-data
+local     docker-cicd-automation_sonarqube-extensions
+local     docker-cicd-automation_sonarqube-logs

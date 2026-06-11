@@ -1,0 +1,13 @@
+{
+  "name": "container-cicd-node-service",
+  "version": "1.0.0",
+  "description": "Node.js service built and deployed through Docker-based CI/CD automation",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "express": "^4.19.2"
+  }
+}

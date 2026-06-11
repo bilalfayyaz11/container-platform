@@ -1,0 +1,42 @@
+services:
+  jenkins:
+    build:
+      context: ./jenkins
+    image: container-cicd-jenkins:lts
+    container_name: container-cicd-jenkins
+    user: root
+    ports:
+      - "8080:8080"
+      - "50000:50000"
+    volumes:
+      - jenkins-home:/var/jenkins_home
+      - /var/run/docker.sock:/var/run/docker.sock
+      - ./sample-app:/workspace/sample-app
+    networks:
+      - cicd-network
+    restart: unless-stopped
+
+  sonarqube:
+    image: sonarqube:lts-community
+    container_name: container-cicd-sonarqube
+    ports:
+      - "9000:9000"
+    environment:
+      - SONAR_ES_BOOTSTRAP_CHECKS_DISABLE=true
+    volumes:
+      - sonarqube-data:/opt/sonarqube/data
+      - sonarqube-extensions:/opt/sonarqube/extensions
+      - sonarqube-logs:/opt/sonarqube/logs
+    networks:
+      - cicd-network
+    restart: unless-stopped
+
+volumes:
+  jenkins-home:
+  sonarqube-data:
+  sonarqube-extensions:
+  sonarqube-logs:
+
+networks:
+  cicd-network:
+    driver: bridge
