@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: container-platform-api
+  labels:
+    app: container-platform-api
+spec:
+  replicas: 3
+  selector:
+    matchLabels:
+      app: container-platform-api
+  template:
+    metadata:
+      labels:
+        app: container-platform-api
+    spec:
+      containers:
+      - name: container-platform-api
+        image: containerplatform1781203735.azurecr.io/container-platform-api:v1
+        imagePullPolicy: IfNotPresent
+        ports:
+        - containerPort: 3000
+        env:
+        - name: PORT
+          value: "3000"
+        resources:
+          requests:
+            memory: "64Mi"
+            cpu: "50m"
+          limits:
+            memory: "128Mi"
+            cpu: "100m"
+        livenessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 30
+          periodSeconds: 10
+        readinessProbe:
+          httpGet:
+            path: /health
+            port: 3000
+          initialDelaySeconds: 5
+          periodSeconds: 5
