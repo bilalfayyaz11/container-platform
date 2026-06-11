@@ -1,0 +1,12 @@
+{
+  "aws_region": "us-east-1",
+  "aws_account_id": "698355729228",
+  "repository_name": "aws-container-runtime",
+  "expected_repository_uri": "698355729228.dkr.ecr.us-east-1.amazonaws.com/aws-container-runtime",
+  "image_tags": [
+    "latest",
+    "v1.0"
+  ],
+  "local_image": "aws-container-runtime:latest",
+  "status": "Local image built and tagged for ECR. Remote push blocked by restricted IAM permissions."
+}

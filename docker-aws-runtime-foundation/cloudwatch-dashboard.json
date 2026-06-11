@@ -1,0 +1,25 @@
+{
+  "widgets": [
+    {
+      "type": "metric",
+      "properties": {
+        "metrics": [
+          ["AWS/ECS", "CPUUtilization", "ServiceName", "aws-container-runtime-service", "ClusterName", "aws-container-runtime-cluster"],
+          ["AWS/ECS", "MemoryUtilization", "ServiceName", "aws-container-runtime-service", "ClusterName", "aws-container-runtime-cluster"]
+        ],
+        "period": 300,
+        "stat": "Average",
+        "region": "us-east-1",
+        "title": "AWS Container Runtime Service Metrics"
+      }
+    },
+    {
+      "type": "log",
+      "properties": {
+        "query": "SOURCE '/ecs/aws-container-runtime' | fields @timestamp, @message | sort @timestamp desc | limit 20",
+        "region": "us-east-1",
+        "title": "Recent Container Logs"
+      }
+    }
+  ]
+}

@@ -1,0 +1,68 @@
+[
+    {
+        "Architecture": "amd64",
+        "Config": {
+            "Cmd": [
+                "nginx",
+                "-g",
+                "daemon off;"
+            ],
+            "Entrypoint": [
+                "/docker-entrypoint.sh"
+            ],
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "NGINX_VERSION=1.31.1",
+                "PKG_RELEASE=1",
+                "DYNPKG_RELEASE=1",
+                "NJS_VERSION=0.9.9",
+                "NJS_RELEASE=1",
+                "ACME_VERSION=0.4.1"
+            ],
+            "ExposedPorts": {
+                "80/tcp": {}
+            },
+            "Labels": {
+                "maintainer": "NGINX Docker Maintainers <docker-maint@nginx.com>"
+            },
+            "StopSignal": "SIGQUIT",
+            "WorkingDir": "/"
+        },
+        "Created": "2026-06-11T15:02:16.7547322Z",
+        "Descriptor": {
+            "digest": "sha256:9975aa95d0fe0fd5710493ff96c076c35c7e049828651af6ff0557f0fd566ea0",
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "size": 2261
+        },
+        "Id": "sha256:9975aa95d0fe0fd5710493ff96c076c35c7e049828651af6ff0557f0fd566ea0",
+        "Metadata": {
+            "LastTagTime": "2026-06-11T15:05:05.636853893Z"
+        },
+        "Os": "linux",
+        "Parent": "sha256:ceb05c8b6d29427a7618e710ef9df0b0d337c2765b4d6dbff2a972b56d8d30a9",
+        "RepoDigests": [
+            "698355729228.dkr.ecr.us-east-1.amazonaws.com/aws-container-runtime@sha256:9975aa95d0fe0fd5710493ff96c076c35c7e049828651af6ff0557f0fd566ea0",
+            "aws-container-runtime@sha256:9975aa95d0fe0fd5710493ff96c076c35c7e049828651af6ff0557f0fd566ea0"
+        ],
+        "RepoTags": [
+            "698355729228.dkr.ecr.us-east-1.amazonaws.com/aws-container-runtime:latest",
+            "698355729228.dkr.ecr.us-east-1.amazonaws.com/aws-container-runtime:v1.0",
+            "aws-container-runtime:latest"
+        ],
+        "RootFS": {
+            "Layers": [
+                "sha256:29df493baa13de438d6d2ece3a8333032e0b7b9b9d8cce4ee82194da255f61e1",
+                "sha256:b910427bd94b3f8656a5557f6e4f484de3b83065ed7699fbbbeadcc313fbc2d9",
+                "sha256:2b05bd5bca95bd1a5c547a075824071a5ab9e328edae0815be974d4add66bf8d",
+                "sha256:2d9b3b00156747f272144e57a865e3b0dd50e4df65e63d44aed86dd30de88e92",
+                "sha256:906af8ee0f8a8e75fe355b299a02c1d7cae7c1dc4134334f21feb4ef4b6c2488",
+                "sha256:ad8253b95bde4ae533795f5e5730ba07f7f764d66f8af245a3118fb66a8ba546",
+                "sha256:9a2cbc774b1f8a067ead2895c6fe744793f41aef4abd01771df1fadc16ec6f25",
+                "sha256:5519239b187cd3709c07332d1796e87305684dbc91e05de8de1682602b6c3118",
+                "sha256:5afee8efc445264d4ff7a518ed15f964c15e2768690f7dc8910e9837b7fb8f2c"
+            ],
+            "Type": "layers"
+        },
+        "Size": 26047376
+    }
+]

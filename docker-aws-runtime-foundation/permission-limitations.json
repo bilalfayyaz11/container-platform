@@ -1,0 +1,23 @@
+{
+  "blocked_aws_actions": [
+    "ec2:CreateKeyPair",
+    "ssm:GetParameters",
+    "ec2:DescribeImages",
+    "ec2:DescribeVpcs",
+    "ec2:DescribeSecurityGroups",
+    "ecr:DescribeRepositories",
+    "ecr:GetAuthorizationToken",
+    "ecs:ListClusters",
+    "cloudwatch:ListDashboards",
+    "logs:DescribeLogGroups"
+  ],
+  "successful_local_actions": [
+    "Docker installed and running",
+    "Nginx container image built locally",
+    "Container started successfully on port 8080",
+    "Image tagged for expected ECR repository URI",
+    "ECS Fargate task definition generated",
+    "CloudWatch dashboard configuration generated"
+  ],
+  "reason": "The live AWS environment used a restricted assumed IAM role. Cloud deployment APIs were blocked, so the implementation produced local runtime evidence and deployment-ready AWS configuration artifacts."
+}
