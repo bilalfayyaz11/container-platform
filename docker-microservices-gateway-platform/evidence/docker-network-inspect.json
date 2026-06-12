@@ -1,8 +1,8 @@
 [
     {
         "Name": "microservices-api-platform_microservices-net",
-        "Id": "e54b5946c699cd61242620ad05c9b4db5e53b134405a0aed2266a40eabd91c16",
-        "Created": "2026-06-12T14:27:17.607926597Z",
+        "Id": "59b63697b6d6f61684975ba9b194041f12d30e2bfa214b5b3e012799b993d1f8",
+        "Created": "2026-06-12T15:44:40.511477904Z",
         "Scope": "local",
         "Driver": "bridge",
         "EnableIPv4": true,
@@ -32,39 +32,39 @@
             "com.docker.compose.version": "5.1.4"
         },
         "Containers": {
-            "0b7945d002248a8a298cac7258b0f82933452a005e3613c4aad54cc4c0b9cdb5": {
-                "Name": "microservices-api-platform-product-service-2",
-                "EndpointID": "ca8f5bb32013395423d3bece3dc7c72b93d6877e0afb9cbaa08a3dcff6d8c4d4",
-                "MacAddress": "e6:d8:f1:5a:0d:6d",
-                "IPv4Address": "172.19.0.6/16",
-                "IPv6Address": ""
-            },
-            "15aa2e619e2def9f9330aceba4996be82dbc06bb20615005672dec9d2df43cfe": {
-                "Name": "microservices-api-platform-order-service-1",
-                "EndpointID": "5b881086c3ab62726301c13b1a0367520875be685d73c7c7837174239524ff8c",
-                "MacAddress": "fa:be:98:c8:95:b8",
-                "IPv4Address": "172.19.0.4/16",
-                "IPv6Address": ""
-            },
-            "47e492a202642131e1a73b0feeb0969c0e400d0e22f15fd7e2a51b374141cdc7": {
+            "43e03a97fa0f2065aba18e31425e8df6fb89f147ab1ae977e8ad9ac31f4576f6": {
                 "Name": "microservices-api-platform-user-service-1",
-                "EndpointID": "3dfa3124289c9d2a50685d0a72a779895bd6b63f68aaece8732ae2bffee3a286",
-                "MacAddress": "3e:15:ab:c6:67:c9",
+                "EndpointID": "bfa108c860862c32762dc3ec2ee41b297ab4ee2c5b458c39e19d633d8c110fb4",
+                "MacAddress": "7e:72:55:de:18:d8",
                 "IPv4Address": "172.19.0.3/16",
                 "IPv6Address": ""
             },
-            "6a0e6a408522b5621858eac74efce0e0eac63584f3dbffc130e4bfdc8092020e": {
+            "840c80c62ac100c284654a14bc8327eb02bfdaac6650eb908f1faab9d095ba74": {
                 "Name": "microservices-api-platform-product-service-1",
-                "EndpointID": "1f20774595741004712932237971760502c9a31447bdbb1f1d498f6de4d23433",
-                "MacAddress": "92:77:c8:57:d8:c5",
+                "EndpointID": "ec64f67fb3125ef07cdaa947f6bfb6f55a511b8d3e8f6296a34e11559e4a10d9",
+                "MacAddress": "46:1d:e5:f6:63:8f",
                 "IPv4Address": "172.19.0.2/16",
                 "IPv6Address": ""
             },
-            "bb88c375fedf942ca720fe2de47b3cc59e28558c1c7930c9e36d3a316a19de05": {
+            "d2238b4b1c596670511dec56ea68446910b8c24667fd7cb3212c8ffb7478c4ec": {
+                "Name": "microservices-api-platform-order-service-1",
+                "EndpointID": "294270ae2c13dc5d1ac347d6eb6e4c5f1b3b52b8afe453f219da0a0cb42daff0",
+                "MacAddress": "a6:ae:a5:d1:f3:42",
+                "IPv4Address": "172.19.0.4/16",
+                "IPv6Address": ""
+            },
+            "d960c3476004d39a91996a819463d75371761b5444717d1588c9c78f88fa2646": {
                 "Name": "microservices-api-platform-api-gateway-1",
-                "EndpointID": "f135ae6af33daee9a3ef41a395f4584aee80fec4a762f2501981febc1bba190c",
-                "MacAddress": "b6:ff:c0:ab:5b:7b",
+                "EndpointID": "7e73e1fec11cd152cedf7033cfc2fd4ded63939b066ca7b0c5f2a4332fe431d0",
+                "MacAddress": "9a:b8:8e:8f:a7:1a",
                 "IPv4Address": "172.19.0.5/16",
+                "IPv6Address": ""
+            },
+            "eac3b7f1ea6469364103b7a6b5a1ced6c9b06cc1868cb22eedc4fee667584d98": {
+                "Name": "microservices-api-platform-product-service-2",
+                "EndpointID": "9874494a420618109c55add104fc09c88475cde47881988ff6e93d1d9e5ba6f4",
+                "MacAddress": "72:e6:7f:ff:27:48",
+                "IPv4Address": "172.19.0.6/16",
                 "IPv6Address": ""
             }
         },

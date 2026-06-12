@@ -1,6 +1,6 @@
-NAME                                           IMAGE                COMMAND                  SERVICE           CREATED              STATUS                            PORTS
-microservices-api-platform-api-gateway-1       api-gateway:v1       "docker-entrypoint.s…"   api-gateway       About a minute ago   Up About a minute (healthy)       0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
-microservices-api-platform-order-service-1     order-service:v1     "docker-entrypoint.s…"   order-service     About a minute ago   Up 25 seconds (healthy)           3003/tcp
-microservices-api-platform-product-service-1   product-service:v1   "docker-entrypoint.s…"   product-service   About a minute ago   Up About a minute (healthy)       3002/tcp
-microservices-api-platform-product-service-2   product-service:v1   "docker-entrypoint.s…"   product-service   7 seconds ago        Up 7 seconds (health: starting)   3002/tcp
-microservices-api-platform-user-service-1      user-service:v1      "docker-entrypoint.s…"   user-service      About a minute ago   Up About a minute (healthy)       3001/tcp
+NAME                                           IMAGE                COMMAND                  SERVICE           CREATED          STATUS                            PORTS
+microservices-api-platform-api-gateway-1       api-gateway:v1       "docker-entrypoint.s…"   api-gateway       41 seconds ago   Up 39 seconds (healthy)           0.0.0.0:3000->3000/tcp, [::]:3000->3000/tcp
+microservices-api-platform-order-service-1     order-service:v1     "docker-entrypoint.s…"   order-service     42 seconds ago   Up 21 seconds (healthy)           3003/tcp
+microservices-api-platform-product-service-1   product-service:v1   "docker-entrypoint.s…"   product-service   42 seconds ago   Up 40 seconds (healthy)           3002/tcp
+microservices-api-platform-product-service-2   product-service:v1   "docker-entrypoint.s…"   product-service   6 seconds ago    Up 5 seconds (health: starting)   3002/tcp
+microservices-api-platform-user-service-1      user-service:v1      "docker-entrypoint.s…"   user-service      42 seconds ago   Up 40 seconds (healthy)           3001/tcp

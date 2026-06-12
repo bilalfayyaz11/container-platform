@@ -1,4 +1,6 @@
 .
+├── .dockerignore
+├── Dockerfile
 ├── api-gateway
 │   ├── .dockerignore
 │   ├── Dockerfile
@@ -18,15 +20,17 @@
 │   ├── Dockerfile
 │   ├── package.json
 │   └── server.js
+├── package.json
 ├── product-service
 │   ├── .dockerignore
 │   ├── Dockerfile
 │   ├── package.json
 │   └── server.js
+├── server.js
 └── user-service
     ├── .dockerignore
     ├── Dockerfile
     ├── package.json
     └── server.js
 
-6 directories, 24 files
+6 directories, 28 files
