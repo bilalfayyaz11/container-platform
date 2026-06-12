@@ -1,0 +1,32 @@
+.
+├── api-gateway
+│   ├── .dockerignore
+│   ├── Dockerfile
+│   ├── package.json
+│   └── server.js
+├── docker-compose.yml
+├── evidence
+│   ├── compose-ps.txt
+│   ├── docker-network-inspect.json
+│   ├── final-file-tree.txt
+│   ├── gateway-health.json
+│   ├── order-through-gateway.json
+│   ├── products-through-gateway.json
+│   └── users-through-gateway.json
+├── order-service
+│   ├── .dockerignore
+│   ├── Dockerfile
+│   ├── package.json
+│   └── server.js
+├── product-service
+│   ├── .dockerignore
+│   ├── Dockerfile
+│   ├── package.json
+│   └── server.js
+└── user-service
+    ├── .dockerignore
+    ├── Dockerfile
+    ├── package.json
+    └── server.js
+
+6 directories, 24 files
