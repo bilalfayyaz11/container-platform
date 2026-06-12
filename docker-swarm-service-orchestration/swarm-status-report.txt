@@ -1,0 +1,44 @@
+=== Docker Swarm Nodes ===
+ID                            HOSTNAME           STATUS    AVAILABILITY   MANAGER STATUS   ENGINE VERSION
+mgaznn0nlzgkso7ntsl2kd6zd *   ip-172-31-10-140   Ready     Active         Leader           29.1.3
+
+=== Docker Swarm Services ===
+ID             NAME                MODE         REPLICAS   IMAGE           PORTS
+kmq2qk2x7772   api-service         replicated   2/2        alpine:latest   
+o6ihli8y4re6   networked-service   replicated   2/2        nginx:alpine    
+0keo755jtk5l   secure-service      replicated   1/1        alpine:latest   
+zvk3tel8ntg6   web-service         replicated   2/2        nginx:alpine    *:8080->80/tcp
+
+=== Docker Swarm Tasks ===
+ID                          NAME                  IMAGE                                                                                   NODE               DESIRED STATE   CURRENT STATE                ERROR     PORTS
+m26j3medw2pu0txuie3zc6v3d   api-service.1         alpine:latest@sha256:a2d49ea686c2adfe3c992e47dc3b5e7fa6e6b5055609400dc2acaeb241c829f4   ip-172-31-10-140   Running         Running 2 minutes ago                  
+kmggyghg7c4cgbzs1mruhyrrp   api-service.2         alpine:latest@sha256:a2d49ea686c2adfe3c992e47dc3b5e7fa6e6b5055609400dc2acaeb241c829f4   ip-172-31-10-140   Running         Running 2 minutes ago                  
+018f2mhk34m3t4hhrgaqqk8hc   networked-service.1   nginx:alpine@sha256:8b1e78743a03dbb2c95171cc58639fef29abc8816598e27fb910ed2e621e589a    ip-172-31-10-140   Running         Running about a minute ago             
+7dzgj8up6klv0dy2c8ergie0w   networked-service.2   nginx:alpine@sha256:8b1e78743a03dbb2c95171cc58639fef29abc8816598e27fb910ed2e621e589a    ip-172-31-10-140   Running         Running about a minute ago             
+opxmmb10apacolq58oshbc8ei   secure-service.1      alpine:latest@sha256:a2d49ea686c2adfe3c992e47dc3b5e7fa6e6b5055609400dc2acaeb241c829f4   ip-172-31-10-140   Running         Running about a minute ago             
+bxogptcxtmcx43vgtjxqwl86s   web-service.1         nginx:alpine@sha256:8b1e78743a03dbb2c95171cc58639fef29abc8816598e27fb910ed2e621e589a    ip-172-31-10-140   Running         Running 24 seconds ago                 
+3w08u6i1ee0c44m051uziu4u4    \_ web-service.1     nginx:1.27-alpine                                                                       ip-172-31-10-140   Shutdown        Shutdown 25 seconds ago                
+oxy1au5ib5u3dp4muxh3tarf8    \_ web-service.1     nginx:alpine@sha256:8b1e78743a03dbb2c95171cc58639fef29abc8816598e27fb910ed2e621e589a    ip-172-31-10-140   Shutdown        Shutdown 53 seconds ago                
+gncm88ihjhaslrby9492of5hv   web-service.2         nginx:alpine@sha256:8b1e78743a03dbb2c95171cc58639fef29abc8816598e27fb910ed2e621e589a    ip-172-31-10-140   Running         Running 20 seconds ago                 
+7gael1wxpjz0mvzq2ubspnd7e    \_ web-service.2     nginx:1.27-alpine                                                                       ip-172-31-10-140   Shutdown        Shutdown 21 seconds ago                
+tdu5dxmqfe9z8v8sfel3dx1yc    \_ web-service.2     nginx:alpine@sha256:8b1e78743a03dbb2c95171cc58639fef29abc8816598e27fb910ed2e621e589a    ip-172-31-10-140   Shutdown        Shutdown 49 seconds ago                
+
+=== Docker Networks ===
+NETWORK ID     NAME                    DRIVER    SCOPE
+c330e13e42d9   bridge                  bridge    local
+929b96d4ffca   docker_gwbridge         bridge    local
+47a073c60d42   host                    host      local
+r2eiwygt86ds   ingress                 overlay   swarm
+36fe4fc9823f   none                    null      local
+j1irutphqwnw   swarm-overlay-network   overlay   swarm
+
+=== Docker Secrets ===
+ID                          NAME          DRIVER    CREATED              UPDATED
+fq18ile01x40csewiqb7qa8o7   db_password             About a minute ago   About a minute ago
+
+=== Docker System Usage ===
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          3         3         182.1MB   182.1MB (100%)
+Containers      11        7         659.5kB   311.3kB (47%)
+Local Volumes   0         0         0B        0B
+Build Cache     0         0         0B        0B
