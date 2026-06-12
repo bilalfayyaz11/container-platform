@@ -1,0 +1,157 @@
+===== DOCKER COMPOSE STATUS =====
+NAME            IMAGE                                                  COMMAND                  SERVICE         CREATED         STATUS                   PORTS
+elasticsearch   docker.elastic.co/elasticsearch/elasticsearch:8.11.0   "/bin/tini -- /usr/l…"   elasticsearch   6 minutes ago   Up 6 minutes (healthy)   0.0.0.0:9200->9200/tcp, [::]:9200->9200/tcp, 0.0.0.0:9300->9300/tcp, [::]:9300->9300/tcp
+kibana          docker.elastic.co/kibana/kibana:8.11.0                 "/bin/tini -- /usr/l…"   kibana          6 minutes ago   Up 5 minutes             0.0.0.0:5601->5601/tcp, [::]:5601->5601/tcp
+logstash        docker.elastic.co/logstash/logstash:8.11.0             "/usr/local/bin/dock…"   logstash        6 minutes ago   Up 5 minutes             0.0.0.0:5000->5000/tcp, [::]:5000->5000/tcp, 0.0.0.0:5000->5000/udp, [::]:5000->5000/udp, 0.0.0.0:5044->5044/tcp, 0.0.0.0:12201->12201/udp, [::]:5044->5044/tcp, [::]:12201->12201/udp, 9600/tcp
+
+===== ELASTICSEARCH HEALTH =====
+{
+  "cluster_name" : "docker-cluster",
+  "status" : "yellow",
+  "timed_out" : false,
+  "number_of_nodes" : 1,
+  "number_of_data_nodes" : 1,
+  "active_primary_shards" : 32,
+  "active_shards" : 32,
+  "relocating_shards" : 0,
+  "initializing_shards" : 0,
+  "unassigned_shards" : 1,
+  "delayed_unassigned_shards" : 0,
+  "number_of_pending_tasks" : 0,
+  "number_of_in_flight_fetch" : 0,
+  "task_max_waiting_in_queue_millis" : 0,
+  "active_shards_percent_as_number" : 96.96969696969697
+}
+
+===== LOGSTASH API =====
+
+===== KIBANA STATUS =====
+{"name":"kibana","uuid":"71d3334c-4d26-4f39-b6da-3cda9903d8bc","version":{"number":"8.11.0","build_hash":"f2ea0c43ec0d854259d63d926b97e5c556b5f6b2","build_number":68160,"build_snapshot":false,"build_date":"2023-11-04T11:05:45.363Z"},"status":{"overall":{"level":"available","summary":"All services are available"},"core":{"elasticsearch":{"level":"available","summary":"Elasticsearch is available","meta":{"warningNodes":[],"incompatibleNodes":[]}},"savedObjects":{"level":"available","summary":"SavedObjects service has completed migrations and is available","meta":{"migratedIndices":{"migrated":0,"skipped":0,"patched":6}}}},"plugins":{"licensing":{"level":"available","summary":"License fetched"},"banners":{"level":"available","summary":"All dependencies are available"},"customBranding":{"level":"available","summary":"All dependencies are available"},"features":{"level":"available","summary":"All dependencies are available"},"globalSearch":{"level":"available","summary":"All dependencies are available"},"mapsEms":{"level":"available","summary":"All dependencies are available"},"globalSearchProviders":{"level":"available","summary":"All dependencies are available"},"guidedOnboarding":{"level":"available","summary":"All dependencies are available"},"home":{"level":"available","summary":"All dependencies are available"},"console":{"level":"available","summary":"All dependencies are available"},"grokdebugger":{"level":"available","summary":"All dependencies are available"},"management":{"level":"available","summary":"All dependencies are available"},"painlessLab":{"level":"available","summary":"All dependencies are available"},"searchprofiler":{"level":"available","summary":"All dependencies are available"},"advancedSettings":{"level":"available","summary":"All dependencies are available"},"cloudDataMigration":{"level":"available","summary":"All dependencies are available"},"spaces":{"level":"available","summary":"All dependencies are available"},"eventLog":{"level":"available","summary":"All dependencies are available"},"security":{"level":"available","summary":"All dependencies are available"},"cloudLinks":{"level":"available","summary":"All dependencies are available"},"data":{"level":"available","summary":"All dependencies are available"},"encryptedSavedObjects":{"level":"available","summary":"All dependencies are available"},"files":{"level":"available","summary":"All dependencies are available"},"lists":{"level":"available","summary":"All dependencies are available"},"snapshotRestore":{"level":"available","summary":"All dependencies are available"},"telemetry":{"level":"available","summary":"All dependencies are available"},"actions":{"level":"available","summary":"All dependencies are available"},"apmDataAccess":{"level":"available","summary":"All dependencies are available"},"charts":{"level":"available","summary":"All dependencies are available"},"dataViewEditor":{"level":"available","summary":"All dependencies are available"},"dataViewFieldEditor":{"level":"available","summary":"All dependencies are available"},"ecsDataQualityDashboard":{"level":"available","summary":"All dependencies are available"},"fileUpload":{"level":"available","summary":"All dependencies are available"},"filesManagement":{"level":"available","summary":"All dependencies are available"},"licenseManagement":{"level":"available","summary":"All dependencies are available"},"savedObjects":{"level":"available","summary":"All dependencies are available"},"telemetryManagementSection":{"level":"available","summary":"All dependencies are available"},"unifiedDocViewer":{"level":"available","summary":"All dependencies are available"},"assetManager":{"level":"available","summary":"All dependencies are available"},"ingestPipelines":{"level":"available","summary":"All dependencies are available"},"notifications":{"level":"available","summary":"All dependencies are available"},"savedObjectsTaggingOss":{"level":"available","summary":"All dependencies are available"},"watcher":{"level":"available","summary":"All dependencies are available"},"savedObjectsManagement":{"level":"available","summary":"All dependencies are available"},"savedObjectsTagging":{"level":"available","summary":"All dependencies are available"},"embeddable":{"level":"available","summary":"All dependencies are available"},"globalSearchBar":{"level":"available","summary":"All dependencies are available"},"unifiedSearch":{"level":"available","summary":"All dependencies are available"},"dataViewManagement":{"level":"available","summary":"All dependencies are available"},"imageEmbeddable":{"level":"available","summary":"All dependencies are available"},"navigation":{"level":"available","summary":"All dependencies are available"},"presentationUtil":{"level":"available","summary":"All dependencies are available"},"savedSearch":{"level":"available","summary":"All dependencies are available"},"uiActionsEnhanced":{"level":"available","summary":"All dependencies are available"},"controls":{"level":"available","summary":"All dependencies are available"},"embeddableEnhanced":{"level":"available","summary":"All dependencies are available"},"expressionError":{"level":"available","summary":"All dependencies are available"},"expressionImage":{"level":"available","summary":"All dependencies are available"},"expressionMetric":{"level":"available","summary":"All dependencies are available"},"expressionRepeatImage":{"level":"available","summary":"All dependencies are available"},"expressionRevealImage":{"level":"available","summary":"All dependencies are available"},"expressionShape":{"level":"available","summary":"All dependencies are available"},"graph":{"level":"available","summary":"All dependencies are available"},"kibanaOverview":{"level":"available","summary":"All dependencies are available"},"urlDrilldown":{"level":"available","summary":"All dependencies are available"},"visualizations":{"level":"available","summary":"All dependencies are available"},"dashboard":{"level":"available","summary":"All dependencies are available"},"eventAnnotation":{"level":"available","summary":"All dependencies are available"},"expressionGauge":{"level":"available","summary":"All dependencies are available"},"expressionHeatmap":{"level":"available","summary":"All dependencies are available"},"expressionLegacyMetricVis":{"level":"available","summary":"All dependencies are available"},"expressionMetricVis":{"level":"available","summary":"All dependencies are available"},"expressionPartitionVis":{"level":"available","summary":"All dependencies are available"},"expressionTagcloud":{"level":"available","summary":"All dependencies are available"},"visDefaultEditor":{"level":"available","summary":"All dependencies are available"},"visTypeHeatmap":{"level":"available","summary":"All dependencies are available"},"visTypeMarkdown":{"level":"available","summary":"All dependencies are available"},"visTypeMetric":{"level":"available","summary":"All dependencies are available"},"visTypeTable":{"level":"available","summary":"All dependencies are available"},"visTypeTagcloud":{"level":"available","summary":"All dependencies are available"},"visTypeTimelion":{"level":"available","summary":"All dependencies are available"},"visTypeTimeseries":{"level":"available","summary":"All dependencies are available"},"visTypeVega":{"level":"available","summary":"All dependencies are available"},"visTypeVislib":{"level":"available","summary":"All dependencies are available"},"visTypeXy":{"level":"available","summary":"All dependencies are available"},"dashboardEnhanced":{"level":"available","summary":"All dependencies are available"},"expressionXY":{"level":"available","summary":"All dependencies are available"},"inputControlVis":{"level":"available","summary":"All dependencies are available"},"triggersActionsUi":{"level":"available","summary":"All dependencies are available"},"visTypeGauge":{"level":"available","summary":"All dependencies are available"},"visTypePie":{"level":"available","summary":"All dependencies are available"},"lens":{"level":"available","summary":"All dependencies are available"},"links":{"level":"available","summary":"All dependencies are available"},"ruleRegistry":{"level":"available","summary":"All dependencies are available"},"stackAlerts":{"level":"available","summary":"All dependencies are available"},"stackConnectors":{"level":"available","summary":"All dependencies are available"},"transform":{"level":"available","summary":"All dependencies are available"},"cases":{"level":"available","summary":"All dependencies are available"},"discover":{"level":"available","summary":"All dependencies are available"},"eventAnnotationListing":{"level":"available","summary":"All dependencies are available"},"maps":{"level":"available","summary":"All dependencies are available"},"aiops":{"level":"available","summary":"All dependencies are available"},"dataVisualizer":{"level":"available","summary":"All dependencies are available"},"discoverEnhanced":{"level":"available","summary":"All dependencies are available"},"observabilityShared":{"level":"available","summary":"All dependencies are available"},"reporting":{"level":"available","summary":"All dependencies are available"},"threatIntelligence":{"level":"available","summary":"All dependencies are available"},"timelines":{"level":"available","summary":"All dependencies are available"},"canvas":{"level":"available","summary":"All dependencies are available"},"cloudSecurityPosture":{"level":"available","summary":"All dependencies are available"},"indexManagement":{"level":"available","summary":"All dependencies are available"},"logExplorer":{"level":"available","summary":"All dependencies are available"},"ml":{"level":"available","summary":"All dependencies are available"},"observabilityAIAssistant":{"level":"available","summary":"All dependencies are available"},"osquery":{"level":"available","summary":"All dependencies are available"},"sessionView":{"level":"available","summary":"All dependencies are available"},"elasticAssistant":{"level":"available","summary":"All dependencies are available"},"exploratoryView":{"level":"available","summary":"All dependencies are available"},"indexLifecycleManagement":{"level":"available","summary":"All dependencies are available"},"kubernetesSecurity":{"level":"available","summary":"All dependencies are available"},"logsShared":{"level":"available","summary":"All dependencies are available"},"observabilityLogExplorer":{"level":"available","summary":"All dependencies are available"},"remoteClusters":{"level":"available","summary":"All dependencies are available"},"rollup":{"level":"available","summary":"All dependencies are available"},"textBasedLanguages":{"level":"available","summary":"All dependencies are available"},"cloudDefend":{"level":"available","summary":"All dependencies are available"},"crossClusterReplication":{"level":"available","summary":"All dependencies are available"},"enterpriseSearch":{"level":"available","summary":"All dependencies are available"},"observability":{"level":"available","summary":"All dependencies are available"},"infra":{"level":"available","summary":"All dependencies are available"},"observabilityOnboarding":{"level":"available","summary":"All dependencies are available"},"securitySolution":{"level":"available","summary":"All dependencies are available"},"synthetics":{"level":"available","summary":"All dependencies are available"},"uptime":{"level":"available","summary":"All dependencies are available"},"apm":{"level":"available","summary":"All dependencies are available"},"monitoring":{"level":"available","summary":"All dependencies are available"},"securitySolutionEss":{"level":"available","summary":"All dependencies are available"},"upgradeAssistant":{"level":"available","summary":"All dependencies are available"},"logstash":{"level":"available","summary":"All dependencies are available"},"ux":{"level":"available","summary":"All dependencies are available"},"alerting":{"level":"available","summary":"Alerting is (probably) ready"},"fleet":{"level":"available","summary":"Fleet is setting up"},"bfetch":{"level":"available","summary":"All dependencies are available"},"contentManagement":{"level":"available","summary":"All dependencies are available"},"customIntegrations":{"level":"available","summary":"All dependencies are available"},"esUiShared":{"level":"available","summary":"All dependencies are available"},"expressions":{"level":"available","summary":"All dependencies are available"},"fieldFormats":{"level":"available","summary":"All dependencies are available"},"ftrApis":{"level":"available","summary":"All dependencies are available"},"kibanaReact":{"level":"available","summary":"All dependencies are available"},"kibanaUtils":{"level":"available","summary":"All dependencies are available"},"licenseApiGuard":{"level":"available","summary":"All dependencies are available"},"metricsDataAccess":{"level":"available","summary":"All dependencies are available"},"monitoringCollection":{"level":"available","summary":"All dependencies are available"},"noDataPage":{"level":"available","summary":"All dependencies are available"},"runtimeFields":{"level":"available","summary":"All dependencies are available"},"savedObjectsFinder":{"level":"available","summary":"All dependencies are available"},"screenshotMode":{"level":"available","summary":"All dependencies are available"},"share":{"level":"available","summary":"All dependencies are available"},"translations":{"level":"available","summary":"All dependencies are available"},"unifiedHistogram":{"level":"available","summary":"All dependencies are available"},"urlForwarding":{"level":"available","summary":"All dependencies are available"},"devTools":{"level":"available","summary":"All dependencies are available"},"inspector":{"level":"available","summary":"All dependencies are available"},"newsfeed":{"level":"available","summary":"All dependencies are available"},"usageCollection":{"level":"available","summary":"All dependencies are available"},"cloud":{"level":"available","summary":"All dependencies are available"},"dataViews":{"level":"available","summary":"All dependencies are available"},"kibanaUsageCollection":{"level":"available","summary":"All dependencies are available"},"telemetryCollectionManager":{"level":"available","summary":"All dependencies are available"},"screenshotting":{"level":"available","summary":"All dependencies are available"},"telemetryCollectionXpack":{"level":"available","summary":"All dependencies are available"},"uiActions":{"level":"available","summary":"All dependencies are available"},"taskManager":{"level":"available","summary":"All dependencies are available"}}},"metrics":{"last_updated":"2026-06-12T19:14:59.701Z","collection_interval_in_millis":5000,"os":{"platform":"linux","platformRelease":"linux-6.14.0-1018-aws","load":{"1m":1.74,"5m":3.03,"15m":1.93},"memory":{"total_in_bytes":8223936512,"free_in_bytes":4428529664,"used_in_bytes":3795406848},"uptime_in_millis":768850,"distro":"Ubuntu","distroRelease":"Ubuntu-20.04","cpu":{"cfs_quota_micros":-1,"cfs_period_micros":100000,"control_group":"/","stat":{"number_of_elapsed_periods":0,"number_of_times_throttled":0,"time_throttled_nanos":0}},"cpuacct":{"control_group":"/","usage_nanos":75620701}},"process":{"memory":{"heap":{"total_in_bytes":470315008,"used_in_bytes":365474424,"size_limit":2197815296},"resident_set_size_in_bytes":547127296},"pid":7,"event_loop_delay":10.224883409836066,"event_loop_delay_histogram":{"min":9.125888,"max":19.791871,"mean":10.224883409836066,"exceeds":0,"stddev":0.5766949801129887,"fromTimestamp":"2026-06-12T19:14:54.701Z","lastUpdatedAt":"2026-06-12T19:14:59.698Z","percentiles":{"50":10.141695,"75":10.231807,"95":10.559487,"99":11.771903}},"event_loop_utilization":{"active":201.71081399996183,"idle":4796.593289000011,"utilization":0.04035585067321041},"uptime_in_millis":341886.03379},"processes":[{"memory":{"heap":{"total_in_bytes":470315008,"used_in_bytes":365474424,"size_limit":2197815296},"resident_set_size_in_bytes":547127296},"pid":7,"event_loop_delay":10.224883409836066,"event_loop_delay_histogram":{"min":9.125888,"max":19.791871,"mean":10.224883409836066,"exceeds":0,"stddev":0.5766949801129887,"fromTimestamp":"2026-06-12T19:14:54.701Z","lastUpdatedAt":"2026-06-12T19:14:59.698Z","percentiles":{"50":10.141695,"75":10.231807,"95":10.559487,"99":11.771903}},"event_loop_utilization":{"active":201.71081399996183,"idle":4796.593289000011,"utilization":0.04035585067321041},"uptime_in_millis":341886.03379}],"response_times":{"avg_in_millis":0,"max_in_millis":0},"concurrent_connections":0,"requests":{"disconnects":0,"total":0,"statusCodes":{},"status_codes":{}},"elasticsearch_client":{"totalActiveSockets":0,"totalIdleSockets":3,"totalQueuedRequests":0}}}
+===== ELASTICSEARCH INDICES =====
+health status index                             uuid                   pri rep docs.count docs.deleted store.size pri.store.size dataset.size
+green  open   .monitoring-kibana-7-2026.06.12   T4mVUgwbRrWVGkK-nrvH1g   1   0         44            0    145.8kb        145.8kb      145.8kb
+yellow open   docker-logs-2026.06.12            C0gLqHaqSHWI3LVWp35CJA   1   1        408            0    308.2kb        308.2kb      308.2kb
+green  open   .monitoring-logstash-7-2026.06.12 tVB3f_tKQ027PUY1hlGM2A   1   0        398            0    216.3kb        216.3kb      216.3kb
+green  open   .monitoring-es-7-2026.06.12       lw08W8HfRey-z6EzEFnsyw   1   0        387          297      926kb          926kb        926kb
+
+===== LOG SEARCH SAMPLE =====
+{
+  "took" : 1,
+  "timed_out" : false,
+  "_shards" : {
+    "total" : 1,
+    "successful" : 1,
+    "skipped" : 0,
+    "failed" : 0
+  },
+  "hits" : {
+    "total" : {
+      "value" : 408,
+      "relation" : "eq"
+    },
+    "max_score" : 1.0,
+    "hits" : [
+      {
+        "_index" : "docker-logs-2026.06.12",
+        "_id" : "2FE-vZ4BtCh4JUaU6aM4",
+        "_score" : 1.0,
+        "_source" : {
+          "host" : "ip-172-31-10-87",
+          "message" : "2026-06-12 19:11:17,103 INFO 172.18.0.1 - - [12/Jun/2026 19:11:17] \"GET / HTTP/1.1\" 200 -",
+          "@version" : "1",
+          "image_id" : "sha256:db427efecff7d42554e543d8e4a49deffa80cfcc69f13f18466754798836dcd0",
+          "timestamp" : "2026-06-12 19:11:17,103",
+          "log_level" : "INFO",
+          "container_id" : "819eb3eeec06b39c52274ddb88f145b6fa2d336f1498f3f3de9fa3ba83021c1c",
+          "log_message" : "172.18.0.1 - - [12/Jun/2026 19:11:17] \"GET / HTTP/1.1\" 200 -",
+          "source_host" : "172.18.0.1",
+          "@timestamp" : "2026-06-12T19:11:17.106Z",
+          "command" : "python app.py",
+          "tags" : [
+            "_dateparsefailure"
+          ],
+          "level" : 3,
+          "version" : "1.1",
+          "tag" : "sample-app",
+          "image_name" : "sample-app-sample-app",
+          "created" : "2026-06-12T19:10:55.32656769Z",
+          "container_name" : "sample-app"
+        }
+      },
+      {
+        "_index" : "docker-logs-2026.06.12",
+        "_id" : "2VE-vZ4BtCh4JUaU6aM4",
+        "_score" : 1.0,
+        "_source" : {
+          "host" : "ip-172-31-10-87",
+          "message" : "2026-06-12 19:11:17,143 INFO 172.18.0.1 - - [12/Jun/2026 19:11:17] \"GET /api/data HTTP/1.1\" 200 -",
+          "@version" : "1",
+          "image_id" : "sha256:db427efecff7d42554e543d8e4a49deffa80cfcc69f13f18466754798836dcd0",
+          "timestamp" : "2026-06-12 19:11:17,143",
+          "log_level" : "INFO",
+          "container_id" : "819eb3eeec06b39c52274ddb88f145b6fa2d336f1498f3f3de9fa3ba83021c1c",
+          "log_message" : "172.18.0.1 - - [12/Jun/2026 19:11:17] \"GET /api/data HTTP/1.1\" 200 -",
+          "source_host" : "172.18.0.1",
+          "@timestamp" : "2026-06-12T19:11:17.143Z",
+          "command" : "python app.py",
+          "tags" : [
+            "_dateparsefailure"
+          ],
+          "level" : 3,
+          "version" : "1.1",
+          "tag" : "sample-app",
+          "image_name" : "sample-app-sample-app",
+          "created" : "2026-06-12T19:10:55.32656769Z",
+          "container_name" : "sample-app"
+        }
+      },
+      {
+        "_index" : "docker-logs-2026.06.12",
+        "_id" : "2lE-vZ4BtCh4JUaU6aM4",
+        "_score" : 1.0,
+        "_source" : {
+          "host" : "ip-172-31-10-87",
+          "message" : "2026-06-12 19:11:17,168 INFO 172.18.0.1 - - [12/Jun/2026 19:11:17] \"GET /health HTTP/1.1\" 200 -",
+          "@version" : "1",
+          "image_id" : "sha256:db427efecff7d42554e543d8e4a49deffa80cfcc69f13f18466754798836dcd0",
+          "timestamp" : "2026-06-12 19:11:17,168",
+          "log_level" : "INFO",
+          "container_id" : "819eb3eeec06b39c52274ddb88f145b6fa2d336f1498f3f3de9fa3ba83021c1c",
+          "log_message" : "172.18.0.1 - - [12/Jun/2026 19:11:17] \"GET /health HTTP/1.1\" 200 -",
+          "source_host" : "172.18.0.1",
+          "@timestamp" : "2026-06-12T19:11:17.169Z",
+          "command" : "python app.py",
+          "tags" : [
+            "_dateparsefailure"
+          ],
+          "level" : 3,
+          "version" : "1.1",
+          "tag" : "sample-app",
+          "image_name" : "sample-app-sample-app",
+          "created" : "2026-06-12T19:10:55.32656769Z",
+          "container_name" : "sample-app"
+        }
+      },
+      {
+        "_index" : "docker-logs-2026.06.12",
+        "_id" : "21E-vZ4BtCh4JUaU6aNx",
+        "_score" : 1.0,
+        "_source" : {
+          "host" : "ip-172-31-10-87",
+          "message" : "2026-06-12 19:11:17,102 INFO Home page accessed",
+          "@version" : "1",
+          "image_id" : "sha256:db427efecff7d42554e543d8e4a49deffa80cfcc69f13f18466754798836dcd0",
+          "timestamp" : "2026-06-12 19:11:17,102",
+          "log_level" : "INFO",
+          "container_id" : "819eb3eeec06b39c52274ddb88f145b6fa2d336f1498f3f3de9fa3ba83021c1c",
+          "log_message" : "Home page accessed",
+          "source_host" : "172.18.0.1",
+          "@timestamp" : "2026-06-12T19:11:17.103Z",
+          "command" : "python app.py",
+          "tags" : [
+            "_dateparsefailure"
+          ],
+          "level" : 3,
+          "version" : "1.1",
+          "tag" : "sample-app",
+          "image_name" : "sample-app-sample-app",

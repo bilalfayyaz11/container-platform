@@ -1,0 +1,37 @@
+services:
+
+  sample-app:
+    build: .
+    container_name: sample-app
+
+    ports:
+      - "8080:5000"
+
+    logging:
+      driver: gelf
+      options:
+        gelf-address: "udp://localhost:12201"
+        tag: "sample-app"
+
+    networks:
+      - elk-centralized-logging-platform_elk-network
+
+  nginx-app:
+    image: nginx:alpine
+    container_name: nginx-sample
+
+    ports:
+      - "8081:80"
+
+    logging:
+      driver: gelf
+      options:
+        gelf-address: "udp://localhost:12201"
+        tag: "nginx-app"
+
+    networks:
+      - elk-centralized-logging-platform_elk-network
+
+networks:
+  elk-centralized-logging-platform_elk-network:
+    external: true
