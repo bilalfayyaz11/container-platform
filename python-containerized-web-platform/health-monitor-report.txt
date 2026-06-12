@@ -1,0 +1,29 @@
+===== PLATFORM HEALTH REPORT =====
+
+===== CONTAINERS =====
+NAME          IMAGE                                   COMMAND                  SERVICE   CREATED          STATUS                    PORTS
+flask-web     python-containerized-web-platform-web   "python app.py"          web       49 seconds ago   Up 48 seconds (healthy)   5000/tcp
+nginx-proxy   nginx:alpine                            "/docker-entrypoint.…"   nginx     48 seconds ago   Up 42 seconds             0.0.0.0:80->80/tcp, [::]:80->80/tcp
+
+===== WEB HEALTH =====
+{
+  "status": "healthy",
+  "timestamp": "2026-06-12T20:06:45.533268"
+}
+
+
+===== RESOURCE USAGE =====
+CONTAINER ID   NAME          CPU %     MEM USAGE / LIMIT     MEM %     NET I/O           BLOCK I/O    PIDS
+bce6db6630b5   nginx-proxy   0.00%     3.336MiB / 7.659GiB   0.04%     19.6kB / 17.9kB   0B / 4.1kB   3
+c1c31d68ea79   flask-web     0.16%     52.1MiB / 7.659GiB    0.66%     16.9kB / 8.41kB   0B / 348kB   3
+
+===== NETWORKS =====
+NETWORK ID     NAME                                            DRIVER    SCOPE
+2cd716268cd6   bridge                                          bridge    local
+dba064480311   host                                            host      local
+5052fe5392df   none                                            null      local
+f7e0c35bdff0   python-containerized-web-platform_app-network   bridge    local
+
+===== VOLUMES =====
+DRIVER    VOLUME NAME
+local     python-containerized-web-platform_sqlite_data

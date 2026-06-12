@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Visitor Tracker</title>
+<style>
+body{font-family:Arial;margin:40px;}
+.container{max-width:800px;margin:auto;}
+.visitor{padding:8px;border-left:4px solid #007bff;margin:5px;}
+</style>
+</head>
+<body>
+
+<div class="container">
+
+<h1>Python Containerized Visitor Tracker</h1>
+
+<form id="visitorForm">
+<input type="text" id="visitorName" required>
+<button type="submit">Add Visitor</button>
+</form>
+
+<div id="message"></div>
+
+<h3>Recent Visitors</h3>
+
+{% for visitor in visitors %}
+<div class="visitor">
+{{ visitor[0] }} - {{ visitor[1] }}
+</div>
+{% endfor %}
+
+</div>
+
+<script>
+document.getElementById("visitorForm").addEventListener(
+"submit",
+function(e){
+
+e.preventDefault();
+
+const fd=new FormData();
+
+fd.append(
+"name",
+document.getElementById("visitorName").value
+);
+
+fetch("/add_visitor",{
+method:"POST",
+body:fd
+})
+.then(r=>r.json())
+.then(data=>{
+document.getElementById("message").innerHTML=data.message;
+setTimeout(()=>location.reload(),1000);
+});
+});
+</script>
+
+</body>
+</html>
