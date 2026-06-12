@@ -1,0 +1,18 @@
+==========================================
+    Docker Health Check Dashboard
+==========================================
+Timestamp: Fri Jun 12 18:55:34 UTC 2026
+
+Container: failing-container
+  Runtime Status: running
+  Health Status: unhealthy
+  Failing Streak: 3
+  Restart Count: 0
+
+Container: healthcheck-advanced
+  Runtime Status: running
+  Health Status: healthy
+  Failing Streak: 0
+  Restart Count: 0
+
+==========================================

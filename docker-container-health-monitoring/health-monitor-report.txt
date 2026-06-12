@@ -1,0 +1,18 @@
+Docker Container Health Monitor
+===============================
+
+Container: healthcheck-advanced
+Status: running
+Health Status: healthy
+Failing Streak: 0
+Restart Count: 0
+Last Health Check:
+
+
+Container: failing-container
+Status: running
+Health Status: unhealthy
+Failing Streak: 3
+Restart Count: 0
+Last Health Check:
+
