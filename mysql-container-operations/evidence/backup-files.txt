@@ -1,0 +1,2 @@
+total 8.0K
+-rw-rw-r-- 1 ubuntu docker 5.2K Jun 12 16:01 company-db-backup-20260612-160115.sql

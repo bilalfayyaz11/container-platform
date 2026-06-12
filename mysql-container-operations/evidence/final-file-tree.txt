@@ -1,0 +1,50 @@
+/home/ubuntu/mysql-container-operations
+├── backups
+│   └── company-db-backup-20260612-160115.sql
+├── evidence
+│   ├── admin-query-results.txt
+│   ├── backup-files.txt
+│   ├── docker-containers.txt
+│   ├── employee-summary.txt
+│   ├── employees.txt
+│   ├── final-file-tree.txt
+│   ├── mysql-container-inspect.json
+│   ├── mysql-network-inspect.json
+│   ├── mysql-port-listener.txt
+│   ├── persistence-test.txt
+│   ├── restore-test.txt
+│   └── tables.txt
+├── mysql-data
+│   ├── #ib_16384_0.dblwr
+│   ├── #ib_16384_1.dblwr
+│   ├── #innodb_redo  [error opening dir]
+│   ├── #innodb_temp  [error opening dir]
+│   ├── auto.cnf
+│   ├── binlog.000001
+│   ├── binlog.000002
+│   ├── binlog.000003
+│   ├── binlog.index
+│   ├── ca-key.pem
+│   ├── ca.pem
+│   ├── client-cert.pem
+│   ├── client-key.pem
+│   ├── company_db  [error opening dir]
+│   ├── ib_buffer_pool
+│   ├── ibdata1
+│   ├── ibtmp1
+│   ├── mysql  [error opening dir]
+│   ├── mysql.ibd
+│   ├── mysql.sock -> /var/run/mysqld/mysqld.sock
+│   ├── performance_schema  [error opening dir]
+│   ├── private_key.pem
+│   ├── public_key.pem
+│   ├── server-cert.pem
+│   ├── server-key.pem
+│   ├── sys  [error opening dir]
+│   ├── undo_001
+│   └── undo_002
+└── sql-scripts
+    ├── admin-queries.sql
+    └── init-schema.sql
+
+11 directories, 37 files

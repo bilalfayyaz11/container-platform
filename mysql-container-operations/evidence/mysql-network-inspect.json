@@ -1,0 +1,56 @@
+[
+    {
+        "Name": "mysql-network",
+        "Id": "417314b719a2a4be77832efcde23baeec9e5edc01797b6ec090592937afc7530",
+        "Created": "2026-06-12T15:55:24.476054074Z",
+        "Scope": "local",
+        "Driver": "bridge",
+        "EnableIPv4": true,
+        "EnableIPv6": false,
+        "IPAM": {
+            "Driver": "default",
+            "Options": {},
+            "Config": [
+                {
+                    "Subnet": "172.18.0.0/16",
+                    "Gateway": "172.18.0.1"
+                }
+            ]
+        },
+        "Internal": false,
+        "Attachable": false,
+        "Ingress": false,
+        "ConfigFrom": {
+            "Network": ""
+        },
+        "ConfigOnly": false,
+        "Options": {},
+        "Labels": {},
+        "Containers": {
+            "2487c12eae3c6e5fb875272f2c6f1151bc1f237f1999491f6e11e4e6411ffa37": {
+                "Name": "mysql-restored",
+                "EndpointID": "ceca18b6aac48f482a1aecdbe5cdf77fb502b11c8084c216a285f79d5d6fa29b",
+                "MacAddress": "56:63:57:3b:79:d7",
+                "IPv4Address": "172.18.0.2/16",
+                "IPv6Address": ""
+            },
+            "9850b06e27ba8a903727e4d6cd4d497c5003aef3e80d79105db93c0168b4a817": {
+                "Name": "mysql-restore-final",
+                "EndpointID": "5efbd62677c331d3367148b6d17655a407c181de852a9110eae8c7e7cdd5036c",
+                "MacAddress": "8e:14:1b:c5:f7:3a",
+                "IPv4Address": "172.18.0.3/16",
+                "IPv6Address": ""
+            }
+        },
+        "Status": {
+            "IPAM": {
+                "Subnets": {
+                    "172.18.0.0/16": {
+                        "IPsInUse": 5,
+                        "DynamicIPsAvailable": 65531
+                    }
+                }
+            }
+        }
+    }
+]
