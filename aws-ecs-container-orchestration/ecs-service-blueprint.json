@@ -1,0 +1,18 @@
+{
+  "cluster": "container-orchestration-cluster",
+  "serviceName": "nginx-service",
+  "taskDefinition": "nginx-task-definition",
+  "desiredCount": 2,
+  "launchType": "EC2",
+  "deploymentConfiguration": {
+    "minimumHealthyPercent": 50,
+    "maximumPercent": 200
+  },
+  "loadBalancers": [
+    {
+      "targetGroupArn": "REPLACE_WITH_TARGET_GROUP_ARN",
+      "containerName": "nginx-container",
+      "containerPort": 80
+    }
+  ]
+}

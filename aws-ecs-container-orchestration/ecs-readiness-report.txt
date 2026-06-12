@@ -1,0 +1,35 @@
+===== AWS ECS READINESS VALIDATION =====
+
+===== AWS CLI VERSION =====
+aws-cli/2.32.21 Python/3.13.11 Linux/6.14.0-1018-aws exe/x86_64.ubuntu.24
+
+===== CALLER IDENTITY =====
+{
+    "UserId": "AROA2FGJ6YNGBX2STWY5V:i-0d4d2317cc8a8ad95",
+    "Account": "698355729228",
+    "Arn": "arn:aws:sts::698355729228:assumed-role/AL-NAFI-CLOUD-LABS-Role/i-0d4d2317cc8a8ad95"
+}
+
+===== REGION =====
+No default region configured
+
+===== VPC PERMISSION CHECK =====
+FAILED: Missing ec2:DescribeVpcs permission
+
+===== SUBNET PERMISSION CHECK =====
+FAILED: Missing ec2:DescribeSubnets permission
+
+===== ECS CLUSTER PERMISSION CHECK =====
+FAILED: Missing ecs:ListClusters permission
+
+===== ECS ACCOUNT SETTINGS CHECK =====
+FAILED: Missing ecs:ListAccountSettings permission
+
+===== TASK EXECUTION ROLE CHECK =====
+FAILED: ecsTaskExecutionRole missing or IAM permission denied
+
+===== DOCKER CHECK =====
+Docker version 29.1.3, build 29.1.3-0ubuntu3~24.04.2
+
+===== LOCAL DOCKER STATUS =====
+CONTAINER ID   IMAGE     COMMAND   CREATED   STATUS    PORTS     NAMES
