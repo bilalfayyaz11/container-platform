@@ -1,0 +1,3 @@
+A custom Docker image was built for a reproducible machine learning Jupyter environment. The image extends the official Jupyter base notebook image and includes TensorFlow, Scikit-learn, Pandas, NumPy, Matplotlib, Seaborn, Plotly, ipywidgets, and Joblib.
+
+The runtime container mounts a host workspace into /home/jovyan/work so notebooks, datasets, trained models, and reports persist independently from the container lifecycle.

@@ -1,0 +1,3 @@
+Docker volume persistence validation completed successfully.
+
+The trained Random Forest model, metadata, dataset, visual reports, and training workflow are stored on the host-mounted workspace. The Jupyter container was restarted, and the model was loaded again from the persisted volume to confirm that artifacts survived container lifecycle changes.

@@ -1,0 +1,2 @@
+CONTAINER ID   IMAGE                          COMMAND                  CREATED         STATUS                    PORTS                                         NAMES
+75127a955a06   jupyter/base-notebook:latest   "tini -g -- start-no…"   5 minutes ago   Up 13 seconds (healthy)   0.0.0.0:8888->8888/tcp, [::]:8888->8888/tcp   jupyter-ml-workspace

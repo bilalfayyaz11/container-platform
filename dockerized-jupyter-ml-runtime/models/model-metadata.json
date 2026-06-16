@@ -1,0 +1,31 @@
+{
+  "model_type": "RandomForestClassifier",
+  "accuracy": 0.92,
+  "n_features": 20,
+  "n_samples_total": 1000,
+  "n_samples_train": 800,
+  "n_samples_test": 200,
+  "feature_names": [
+    "feature_0",
+    "feature_1",
+    "feature_2",
+    "feature_3",
+    "feature_4",
+    "feature_5",
+    "feature_6",
+    "feature_7",
+    "feature_8",
+    "feature_9",
+    "feature_10",
+    "feature_11",
+    "feature_12",
+    "feature_13",
+    "feature_14",
+    "feature_15",
+    "feature_16",
+    "feature_17",
+    "feature_18",
+    "feature_19"
+  ],
+  "model_path": "/home/jovyan/work/models/random-forest-classifier.joblib"
+}

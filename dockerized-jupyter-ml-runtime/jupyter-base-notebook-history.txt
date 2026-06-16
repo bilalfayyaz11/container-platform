@@ -1,0 +1,51 @@
+IMAGE          CREATED       CREATED BY                                      SIZE      COMMENT
+8c903974902b   2 years ago   WORKDIR /home/jovyan                            4.1kB     buildkit.dockerfile.v0
+<missing>      2 years ago   USER 1000                                       0B        buildkit.dockerfile.v0
+<missing>      2 years ago   HEALTHCHECK &{["CMD-SHELL" "/etc/jupyter/doc…   0B        buildkit.dockerfile.v0
+<missing>      2 years ago   RUN /bin/bash -o pipefail -c fix-permissions…   20.5kB    buildkit.dockerfile.v0
+<missing>      2 years ago   USER root                                       0B        buildkit.dockerfile.v0
+<missing>      2 years ago   COPY jupyter_server_config.py docker_healthc…   20.5kB    buildkit.dockerfile.v0
+<missing>      2 years ago   COPY start-notebook.py start-notebook.sh sta…   32.8kB    buildkit.dockerfile.v0
+<missing>      2 years ago   CMD ["start-notebook.py"]                       0B        buildkit.dockerfile.v0
+<missing>      2 years ago   EXPOSE map[8888/tcp:{}]                         0B        buildkit.dockerfile.v0
+<missing>      2 years ago   ENV JUPYTER_PORT=8888                           0B        buildkit.dockerfile.v0
+<missing>      2 years ago   RUN /bin/bash -o pipefail -c mamba install -…   572MB     buildkit.dockerfile.v0
+<missing>      2 years ago   WORKDIR /tmp                                    4.1kB     buildkit.dockerfile.v0
+<missing>      2 years ago   USER 1000                                       0B        buildkit.dockerfile.v0
+<missing>      2 years ago   RUN /bin/bash -o pipefail -c apt-get update …   159MB     buildkit.dockerfile.v0
+<missing>      2 years ago   USER root                                       0B        buildkit.dockerfile.v0
+<missing>      2 years ago   SHELL [/bin/bash -o pipefail -c]                0B        buildkit.dockerfile.v0
+<missing>      2 years ago   LABEL maintainer=Jupyter Project <jupyter@go…   0B        buildkit.dockerfile.v0
+<missing>      2 years ago   WORKDIR /home/jovyan                            4.1kB     buildkit.dockerfile.v0
+<missing>      2 years ago   USER 1000                                       0B        buildkit.dockerfile.v0
+<missing>      2 years ago   RUN |4 NB_USER=jovyan NB_UID=1000 NB_GID=100…   24.6kB    buildkit.dockerfile.v0
+<missing>      2 years ago   USER root                                       0B        buildkit.dockerfile.v0
+<missing>      2 years ago   COPY run-hooks.sh start.sh /usr/local/bin/ #…   32.8kB    buildkit.dockerfile.v0
+<missing>      2 years ago   CMD ["start.sh"]                                0B        buildkit.dockerfile.v0
+<missing>      2 years ago   ENTRYPOINT ["tini" "-g" "--"]                   0B        buildkit.dockerfile.v0
+<missing>      2 years ago   RUN |4 NB_USER=jovyan NB_UID=1000 NB_GID=100…   316MB     buildkit.dockerfile.v0
+<missing>      2 years ago   WORKDIR /tmp                                    4.1kB     buildkit.dockerfile.v0
+<missing>      2 years ago   COPY initial-condarc /opt/conda/.condarc # b…   16.4kB    buildkit.dockerfile.v0
+<missing>      2 years ago   RUN |4 NB_USER=jovyan NB_UID=1000 NB_GID=100…   16.4kB    buildkit.dockerfile.v0
+<missing>      2 years ago   ARG PYTHON_VERSION=3.11                         0B        buildkit.dockerfile.v0
+<missing>      2 years ago   USER 1000                                       0B        buildkit.dockerfile.v0
+<missing>      2 years ago   RUN |3 NB_USER=jovyan NB_UID=1000 NB_GID=100…   77.8kB    buildkit.dockerfile.v0
+<missing>      2 years ago   RUN |3 NB_USER=jovyan NB_UID=1000 NB_GID=100…   16.4kB    buildkit.dockerfile.v0
+<missing>      2 years ago   RUN |3 NB_USER=jovyan NB_UID=1000 NB_GID=100…   4.1kB     buildkit.dockerfile.v0
+<missing>      2 years ago   COPY fix-permissions /usr/local/bin/fix-perm…   20.5kB    buildkit.dockerfile.v0
+<missing>      2 years ago   ENV PATH=/opt/conda/bin:/usr/local/sbin:/usr…   0B        buildkit.dockerfile.v0
+<missing>      2 years ago   ENV CONDA_DIR=/opt/conda SHELL=/bin/bash NB_…   0B        buildkit.dockerfile.v0
+<missing>      2 years ago   RUN |3 NB_USER=jovyan NB_UID=1000 NB_GID=100…   28.2MB    buildkit.dockerfile.v0
+<missing>      2 years ago   ENV DEBIAN_FRONTEND=noninteractive              0B        buildkit.dockerfile.v0
+<missing>      2 years ago   USER root                                       0B        buildkit.dockerfile.v0
+<missing>      2 years ago   SHELL [/bin/bash -o pipefail -c]                0B        buildkit.dockerfile.v0
+<missing>      2 years ago   ARG NB_GID=100                                  0B        buildkit.dockerfile.v0
+<missing>      2 years ago   ARG NB_UID=1000                                 0B        buildkit.dockerfile.v0
+<missing>      2 years ago   ARG NB_USER=jovyan                              0B        buildkit.dockerfile.v0
+<missing>      2 years ago   LABEL maintainer=Jupyter Project <jupyter@go…   0B        buildkit.dockerfile.v0
+<missing>      2 years ago   /bin/sh -c #(nop)  CMD ["/bin/bash"]            0B        
+<missing>      2 years ago   /bin/sh -c #(nop) ADD file:63d5ab3ef0aab308c…   87.5MB    
+<missing>      2 years ago   /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B        
+<missing>      2 years ago   /bin/sh -c #(nop)  LABEL org.opencontainers.…   0B        
+<missing>      2 years ago   /bin/sh -c #(nop)  ARG LAUNCHPAD_BUILD_ARCH     0B        
+<missing>      2 years ago   /bin/sh -c #(nop)  ARG RELEASE                  0B        

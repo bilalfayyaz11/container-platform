@@ -1,0 +1,293 @@
+[
+    {
+        "Id": "e143cd7416e069dba50283d643d2c1c56d70660b2136c6a5f8956cb02dbc5388",
+        "Created": "2026-06-16T17:49:22.921679549Z",
+        "Path": "tini",
+        "Args": [
+            "-g",
+            "--",
+            "start-notebook.py"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 11067,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2026-06-16T17:49:23.042586272Z",
+            "FinishedAt": "0001-01-01T00:00:00Z",
+            "Health": {
+                "Status": "healthy",
+                "FailingStreak": 0,
+                "Log": [
+                    {
+                        "Start": "2026-06-16T17:49:33.5910231Z",
+                        "End": "2026-06-16T17:49:33.855723472Z",
+                        "ExitCode": 0,
+                        "Output": "b'{\"version\": \"2.8.0\"}'\n"
+                    },
+                    {
+                        "Start": "2026-06-16T17:49:38.857322232Z",
+                        "End": "2026-06-16T17:49:39.122343267Z",
+                        "ExitCode": 0,
+                        "Output": "b'{\"version\": \"2.8.0\"}'\n"
+                    },
+                    {
+                        "Start": "2026-06-16T17:49:44.124289357Z",
+                        "End": "2026-06-16T17:49:44.3891289Z",
+                        "ExitCode": 0,
+                        "Output": "b'{\"version\": \"2.8.0\"}'\n"
+                    },
+                    {
+                        "Start": "2026-06-16T17:49:49.390364412Z",
+                        "End": "2026-06-16T17:49:49.648120063Z",
+                        "ExitCode": 0,
+                        "Output": "b'{\"version\": \"2.8.0\"}'\n"
+                    },
+                    {
+                        "Start": "2026-06-16T17:49:54.649263396Z",
+                        "End": "2026-06-16T17:49:54.921323688Z",
+                        "ExitCode": 0,
+                        "Output": "b'{\"version\": \"2.8.0\"}'\n"
+                    }
+                ]
+            }
+        },
+        "Image": "sha256:ff844938accfc01e81780384190af1820db6025f47a7ab97806ee4561209ff06",
+        "ResolvConfPath": "/var/lib/docker/containers/e143cd7416e069dba50283d643d2c1c56d70660b2136c6a5f8956cb02dbc5388/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/e143cd7416e069dba50283d643d2c1c56d70660b2136c6a5f8956cb02dbc5388/hostname",
+        "HostsPath": "/var/lib/docker/containers/e143cd7416e069dba50283d643d2c1c56d70660b2136c6a5f8956cb02dbc5388/hosts",
+        "LogPath": "/var/lib/docker/containers/e143cd7416e069dba50283d643d2c1c56d70660b2136c6a5f8956cb02dbc5388/e143cd7416e069dba50283d643d2c1c56d70660b2136c6a5f8956cb02dbc5388-json.log",
+        "Name": "/jupyter-ml-runtime",
+        "RestartCount": 0,
+        "Driver": "overlayfs",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "docker-default",
+        "ExecIDs": null,
+        "HostConfig": {
+            "Binds": [
+                "/home/ubuntu/ml-docker-workspace:/home/jovyan/work"
+            ],
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "bridge",
+            "PortBindings": {
+                "8888/tcp": [
+                    {
+                        "HostIp": "",
+                        "HostPort": "8888"
+                    }
+                ]
+            },
+            "RestartPolicy": {
+                "Name": "no",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                31,
+                63
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": [],
+            "DnsSearch": [],
+            "ExtraHosts": null,
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": [],
+            "BlkioDeviceReadBps": [],
+            "BlkioDeviceWriteBps": [],
+            "BlkioDeviceReadIOps": [],
+            "BlkioDeviceWriteIOps": [],
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": [],
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": [],
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/acpi",
+                "/proc/asound",
+                "/proc/interrupts",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/sys/devices/virtual/powercap",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "Storage": {
+            "RootFS": {
+                "Snapshot": {
+                    "Name": "overlayfs"
+                }
+            }
+        },
+        "Mounts": [
+            {
+                "Type": "bind",
+                "Source": "/home/ubuntu/ml-docker-workspace",
+                "Destination": "/home/jovyan/work",
+                "Mode": "",
+                "RW": true,
+                "Propagation": "rprivate"
+            }
+        ],
+        "Config": {
+            "Hostname": "e143cd7416e0",
+            "Domainname": "",
+            "User": "jovyan",
+            "AttachStdin": false,
+            "AttachStdout": false,
+            "AttachStderr": false,
+            "ExposedPorts": {
+                "8888/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "JUPYTER_ENABLE_LAB=yes",
+                "PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBIAN_FRONTEND=noninteractive",
+                "CONDA_DIR=/opt/conda",
+                "SHELL=/bin/bash",
+                "NB_USER=jovyan",
+                "NB_UID=1000",
+                "NB_GID=100",
+                "LC_ALL=en_US.UTF-8",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US.UTF-8",
+                "HOME=/home/jovyan",
+                "JUPYTER_PORT=8888"
+            ],
+            "Cmd": [
+                "start-notebook.py"
+            ],
+            "Healthcheck": {
+                "Test": [
+                    "CMD-SHELL",
+                    "/etc/jupyter/docker_healthcheck.py || exit 1"
+                ],
+                "Interval": 5000000000,
+                "Timeout": 3000000000,
+                "StartPeriod": 5000000000,
+                "Retries": 3
+            },
+            "Image": "jupyter-ml-runtime:latest",
+            "Volumes": null,
+            "WorkingDir": "/home/jovyan",
+            "Entrypoint": [
+                "tini",
+                "-g",
+                "--"
+            ],
+            "Labels": {
+                "maintainer": "Bilal Fayyaz",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04",
+                "purpose": "containerized-ml-jupyter-runtime"
+            }
+        },
+        "NetworkSettings": {
+            "SandboxID": "970943073a6670dc6cda3b1bee81dcddce5ebee5b52af373cf9884da101693e8",
+            "SandboxKey": "/var/run/docker/netns/970943073a66",
+            "Ports": {
+                "8888/tcp": [
+                    {
+                        "HostIp": "0.0.0.0",
+                        "HostPort": "8888"
+                    },
+                    {
+                        "HostIp": "::",
+                        "HostPort": "8888"
+                    }
+                ]
+            },
+            "Networks": {
+                "bridge": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": null,
+                    "DriverOpts": null,
+                    "GwPriority": 0,
+                    "NetworkID": "001c6d7e0d2a1685491496b460c1e53973bb57e5eec168f64001632c39b05d74",
+                    "EndpointID": "0040546ceef3c66203fc9e7768fa9bd7c3467d8b853d981d8e4de875b77bba5a",
+                    "Gateway": "172.17.0.1",
+                    "IPAddress": "172.17.0.2",
+                    "MacAddress": "86:21:46:74:85:59",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "DNSNames": null
+                }
+            }
+        },
+        "ImageManifestDescriptor": {
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "digest": "sha256:ff844938accfc01e81780384190af1820db6025f47a7ab97806ee4561209ff06",
+            "size": 5181,
+            "platform": {
+                "architecture": "amd64",
+                "os": "linux"
+            }
+        }
+    }
+]

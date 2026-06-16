@@ -1,0 +1,19 @@
+{
+  "loaded_model_accuracy": 0.92,
+  "original_accuracy": 0.92,
+  "accuracy_match": true,
+  "sample_predictions": [
+    1,
+    0,
+    0,
+    0,
+    1
+  ],
+  "sample_actual_values": [
+    1,
+    0,
+    0,
+    0,
+    1
+  ]
+}

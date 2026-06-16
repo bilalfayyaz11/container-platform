@@ -1,0 +1,102 @@
+[
+    {
+        "Architecture": "amd64",
+        "Config": {
+            "Cmd": [
+                "start-notebook.py"
+            ],
+            "Entrypoint": [
+                "tini",
+                "-g",
+                "--"
+            ],
+            "Env": [
+                "PATH=/opt/conda/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "DEBIAN_FRONTEND=noninteractive",
+                "CONDA_DIR=/opt/conda",
+                "SHELL=/bin/bash",
+                "NB_USER=jovyan",
+                "NB_UID=1000",
+                "NB_GID=100",
+                "LC_ALL=en_US.UTF-8",
+                "LANG=en_US.UTF-8",
+                "LANGUAGE=en_US.UTF-8",
+                "HOME=/home/jovyan",
+                "JUPYTER_PORT=8888"
+            ],
+            "ExposedPorts": {
+                "8888/tcp": {}
+            },
+            "Healthcheck": {
+                "Interval": 5000000000,
+                "Retries": 3,
+                "StartPeriod": 5000000000,
+                "Test": [
+                    "CMD-SHELL",
+                    "/etc/jupyter/docker_healthcheck.py || exit 1"
+                ],
+                "Timeout": 3000000000
+            },
+            "Labels": {
+                "maintainer": "Bilal Fayyaz",
+                "org.opencontainers.image.ref.name": "ubuntu",
+                "org.opencontainers.image.version": "22.04",
+                "purpose": "containerized-ml-jupyter-runtime"
+            },
+            "Shell": [
+                "/bin/bash",
+                "-o",
+                "pipefail",
+                "-c"
+            ],
+            "User": "jovyan",
+            "WorkingDir": "/home/jovyan"
+        },
+        "Created": "2026-06-16T17:49:09.940563355Z",
+        "Descriptor": {
+            "digest": "sha256:ff844938accfc01e81780384190af1820db6025f47a7ab97806ee4561209ff06",
+            "mediaType": "application/vnd.oci.image.manifest.v1+json",
+            "size": 5181
+        },
+        "Id": "sha256:ff844938accfc01e81780384190af1820db6025f47a7ab97806ee4561209ff06",
+        "Metadata": {
+            "LastTagTime": "2026-06-16T17:49:10.035774087Z"
+        },
+        "Os": "linux",
+        "Parent": "sha256:dfd7b6d3b684e3b9b22f2c99040c0d23ca51208e47876a76eba007a3b77f586b",
+        "RepoDigests": [
+            "jupyter-ml-runtime@sha256:ff844938accfc01e81780384190af1820db6025f47a7ab97806ee4561209ff06"
+        ],
+        "RepoTags": [
+            "jupyter-ml-runtime:latest"
+        ],
+        "RootFS": {
+            "Layers": [
+                "sha256:256d88da41857db513b95b50ba9a9b28491b58c954e25477d5dad8abb465430b",
+                "sha256:9e19e4556c44124f879c781d8b6d4f64718ca876707b58a02970ddcb4d36633c",
+                "sha256:866df332dea4389e0c3fb9e821c977f4adf32a4582c69dc93b23ee23cd9a6255",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:952c96ee354b3ee674f37998ea8be0af7838ac2f225c384502684e1fecc4bf21",
+                "sha256:88304fea615ada14aa805a7e831950e83ddb5bdaef7bb9096b0fc0d4ece2c4ae",
+                "sha256:7438e5bca28b553905b3d1715292c0f69247dfe33d1e2fc3e76a17dedaac6ae2",
+                "sha256:186dd1d5045ac44da42214dda1c24a8c943d08f7a032e86ed37bb33896b73041",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:079f33e41632552e215e886818fe99aa7f7f83cbe89781282ccca99e3b0a9308",
+                "sha256:13070936990883b21c6dc2d6cd2cb94e7980a0d6faa19baec551e3d236290603",
+                "sha256:f825b1201811984a78081070c2bfe1e77ccc25786edc9aef58bc24a12fb1471a",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:4113305ae79c0dedec32f452d7bb1e17c2d6329a97dff850d533ab64b8a46e9b",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:889f93f0e367bc5c6f300998a03a089dda1aa5b76a53d554f76a73ab98cd2be5",
+                "sha256:8870c9dab11488669638e9a60ee30fefe4518326b025b7d2479c33b6fcb3ff2e",
+                "sha256:b38138cf8b0e0709dc10fb29371eb94695190a64d16482fb42caf3057a752cb5",
+                "sha256:c2befbc55f391a8ebf443199412d69168c3c24bd20622ab70437471f291b986e",
+                "sha256:5f70bf18a086007016e948b04aed3b82103a36bea41755b6cddfaf10ace3c6ef",
+                "sha256:8514d255a6aff03b08180c7eca340c7754fd1125f61a675dcc7857885cccebf9",
+                "sha256:76c4b2763a7b32f3e74c03ce3848740ca2016a8d6cacfee122e61a42c5d610ad"
+            ],
+            "Type": "layers"
+        },
+        "Size": 1201906237
+    }
+]

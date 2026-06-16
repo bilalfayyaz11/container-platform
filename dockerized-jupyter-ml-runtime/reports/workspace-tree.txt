@@ -1,0 +1,25 @@
+.
+├── data
+│   └── synthetic_classification_dataset.csv
+├── jupyter-ml-workspace-container.json
+├── jupyter-ml-workspace-logs.txt
+├── models
+│   ├── model-metadata.json
+│   └── random-forest-classifier.joblib
+├── notebooks
+│   └── ml-container-training.py
+└── reports
+    ├── classification-report.txt
+    ├── confusion-matrix.png
+    ├── container-python-freeze.txt
+    ├── container-python-version.txt
+    ├── docker-running-containers.txt
+    ├── feature-correlation-heatmap.png
+    ├── feature-importance.csv
+    ├── feature-importance.png
+    ├── jupyter-container-after-restart.json
+    ├── model-load-validation.json
+    ├── target-distribution.png
+    └── workspace-tree.txt
+
+5 directories, 18 files

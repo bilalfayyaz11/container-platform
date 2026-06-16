@@ -1,0 +1,44 @@
+Entered start.sh with args: jupyter lab
+Running hooks in: /usr/local/bin/start-notebook.d as uid: 1000 gid: 100
+Done running hooks in: /usr/local/bin/start-notebook.d
+Running hooks in: /usr/local/bin/before-notebook.d as uid: 1000 gid: 100
+Done running hooks in: /usr/local/bin/before-notebook.d
+Executing the command: jupyter lab
+[I 2026-06-16 17:36:16.144 ServerApp] Package jupyterlab took 0.0000s to import
+[I 2026-06-16 17:36:16.184 ServerApp] Package jupyter_lsp took 0.0390s to import
+[W 2026-06-16 17:36:16.184 ServerApp] A `_jupyter_server_extension_points` function was not found in jupyter_lsp. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2026-06-16 17:36:16.197 ServerApp] Package jupyter_server_terminals took 0.0117s to import
+[I 2026-06-16 17:36:16.203 ServerApp] Package nbclassic took 0.0053s to import
+[W 2026-06-16 17:36:16.207 ServerApp] A `_jupyter_server_extension_points` function was not found in nbclassic. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2026-06-16 17:36:16.208 ServerApp] Package notebook took 0.0000s to import
+[I 2026-06-16 17:36:16.212 ServerApp] Package notebook_shim took 0.0000s to import
+[W 2026-06-16 17:36:16.213 ServerApp] A `_jupyter_server_extension_points` function was not found in notebook_shim. Instead, a `_jupyter_server_extension_paths` function was found and will be used for now. This function name will be deprecated in future releases of Jupyter Server.
+[I 2026-06-16 17:36:16.214 ServerApp] jupyter_lsp | extension was successfully linked.
+[I 2026-06-16 17:36:16.222 ServerApp] jupyter_server_terminals | extension was successfully linked.
+[I 2026-06-16 17:36:16.231 ServerApp] jupyterlab | extension was successfully linked.
+[I 2026-06-16 17:36:16.239 ServerApp] nbclassic | extension was successfully linked.
+[I 2026-06-16 17:36:16.248 ServerApp] notebook | extension was successfully linked.
+[I 2026-06-16 17:36:16.257 ServerApp] Writing Jupyter server cookie secret to /home/jovyan/.local/share/jupyter/runtime/jupyter_cookie_secret
+[I 2026-06-16 17:36:16.699 ServerApp] notebook_shim | extension was successfully linked.
+[I 2026-06-16 17:36:16.736 ServerApp] notebook_shim | extension was successfully loaded.
+[I 2026-06-16 17:36:16.740 ServerApp] jupyter_lsp | extension was successfully loaded.
+[I 2026-06-16 17:36:16.742 ServerApp] jupyter_server_terminals | extension was successfully loaded.
+[I 2026-06-16 17:36:16.745 LabApp] JupyterLab extension loaded from /opt/conda/lib/python3.11/site-packages/jupyterlab
+[I 2026-06-16 17:36:16.745 LabApp] JupyterLab application directory is /opt/conda/share/jupyter/lab
+[I 2026-06-16 17:36:16.746 LabApp] Extension Manager is 'pypi'.
+[I 2026-06-16 17:36:16.751 ServerApp] jupyterlab | extension was successfully loaded.
+[I 2026-06-16 17:36:16.757 ServerApp] nbclassic | extension was successfully loaded.
+[I 2026-06-16 17:36:16.761 ServerApp] notebook | extension was successfully loaded.
+[I 2026-06-16 17:36:16.762 ServerApp] Serving notebooks from local directory: /home/jovyan
+[I 2026-06-16 17:36:16.762 ServerApp] Jupyter Server 2.8.0 is running at:
+[I 2026-06-16 17:36:16.762 ServerApp] http://75127a955a06:8888/lab?token=5d25093eebce4f771b1e41b18887b6d6ae0bb3f86300c667
+[I 2026-06-16 17:36:16.762 ServerApp]     http://127.0.0.1:8888/lab?token=5d25093eebce4f771b1e41b18887b6d6ae0bb3f86300c667
+[I 2026-06-16 17:36:16.763 ServerApp] Use Control-C to stop this server and shut down all kernels (twice to skip confirmation).
+[C 2026-06-16 17:36:16.768 ServerApp] 
+    
+    To access the server, open this file in a browser:
+        file:///home/jovyan/.local/share/jupyter/runtime/jpserver-7-open.html
+    Or copy and paste one of these URLs:
+        http://75127a955a06:8888/lab?token=5d25093eebce4f771b1e41b18887b6d6ae0bb3f86300c667
+        http://127.0.0.1:8888/lab?token=5d25093eebce4f771b1e41b18887b6d6ae0bb3f86300c667
+[I 2026-06-16 17:36:17.823 ServerApp] Skipped non-installed server(s): bash-language-server, dockerfile-language-server-nodejs, javascript-typescript-langserver, jedi-language-server, julia-language-server, pyright, python-language-server, python-lsp-server, r-languageserver, sql-language-server, texlab, typescript-language-server, unified-language-server, vscode-css-languageserver-bin, vscode-html-languageserver-bin, vscode-json-languageserver-bin, yaml-language-server
