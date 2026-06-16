@@ -1,0 +1,1 @@
+Compose with Nginx is valid

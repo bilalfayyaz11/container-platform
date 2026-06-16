@@ -1,0 +1,3 @@
+compose-application-stack-web-2        compose-application-stack-web   Up 21 seconds (healthy)
+compose-application-stack-web-3        compose-application-stack-web   Up 20 seconds (healthy)
+compose-application-stack-web-1        compose-application-stack-web   Up 59 seconds (healthy)

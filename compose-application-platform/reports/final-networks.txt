@@ -1,0 +1,1 @@
+16ae465b28a1   compose-application-stack_app-network   bridge    local

@@ -1,0 +1,28 @@
+{
+  "users": [
+    {
+      "created_at": "2026-06-16T18:53:31.885125",
+      "email": "bilal@example.com",
+      "id": 4,
+      "name": "Bilal Fayyaz"
+    },
+    {
+      "created_at": "2026-06-16T18:44:45.751266",
+      "email": "john.doe@example.com",
+      "id": 1,
+      "name": "John Doe"
+    },
+    {
+      "created_at": "2026-06-16T18:44:45.751266",
+      "email": "jane.smith@example.com",
+      "id": 2,
+      "name": "Jane Smith"
+    },
+    {
+      "created_at": "2026-06-16T18:44:45.751266",
+      "email": "bob.johnson@example.com",
+      "id": 3,
+      "name": "Bob Johnson"
+    }
+  ]
+}

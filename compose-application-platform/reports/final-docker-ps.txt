@@ -1,0 +1,6 @@
+NAMES                                  IMAGE                           STATUS                   PORTS
+compose-application-stack-nginx-1      nginx:alpine                    Up 2 minutes             0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+compose-application-stack-web-1        compose-application-stack-web   Up 2 minutes (healthy)   5000/tcp
+compose-application-stack-adminer-1    adminer:4.8.1                   Up 3 minutes             0.0.0.0:8081->8080/tcp, [::]:8081->8080/tcp
+compose-application-stack-postgres-1   postgres:16-alpine              Up 3 minutes (healthy)   5432/tcp
+compose-application-stack-redis-1      redis:7-alpine                  Up 3 minutes (healthy)   6379/tcp

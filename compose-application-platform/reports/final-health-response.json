@@ -1,0 +1,5 @@
+{
+  "postgres": "healthy",
+  "redis": "healthy",
+  "web": "healthy"
+}

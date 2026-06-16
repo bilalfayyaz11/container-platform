@@ -1,0 +1,2 @@
+local     compose-application-stack_postgres-data
+local     compose-application-stack_redis-data

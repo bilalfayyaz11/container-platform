@@ -1,0 +1,8 @@
+ id |     name     |          email          |         created_at         
+----+--------------+-------------------------+----------------------------
+  1 | John Doe     | john.doe@example.com    | 2026-06-16 18:44:45.751266
+  2 | Jane Smith   | jane.smith@example.com  | 2026-06-16 18:44:45.751266
+  3 | Bob Johnson  | bob.johnson@example.com | 2026-06-16 18:44:45.751266
+  4 | Bilal Fayyaz | bilal@example.com       | 2026-06-16 18:53:31.885125
+(4 rows)
+

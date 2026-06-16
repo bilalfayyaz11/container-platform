@@ -1,0 +1,85 @@
+adminer-1  | 2026-06-16T18:45:14.636813032Z [Tue Jun 16 18:45:14 2026] PHP 7.4.33 Development Server (http://[::]:8080) started
+redis-1    | 2026-06-16T18:44:43.450894060Z 1:C 16 Jun 2026 18:44:43.449 # WARNING Memory overcommit must be enabled! Without it, a background save or replication may fail under low memory condition. Being disabled, it can also cause failures without low memory condition, see https://github.com/jemalloc/jemalloc/issues/1328. To fix this issue add 'vm.overcommit_memory = 1' to /etc/sysctl.conf and then reboot or run the command 'sysctl vm.overcommit_memory=1' for this to take effect.
+redis-1    | 2026-06-16T18:44:43.451665093Z 1:C 16 Jun 2026 18:44:43.449 * oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-1    | 2026-06-16T18:44:43.451680663Z 1:C 16 Jun 2026 18:44:43.449 * Redis version=7.4.9, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-1    | 2026-06-16T18:44:43.451686103Z 1:C 16 Jun 2026 18:44:43.449 * Configuration loaded
+redis-1    | 2026-06-16T18:44:43.453258561Z 1:M 16 Jun 2026 18:44:43.453 * Increased maximum number of open files to 10032 (it was originally set to 1024).
+redis-1    | 2026-06-16T18:44:43.453709189Z 1:M 16 Jun 2026 18:44:43.453 * monotonic clock: POSIX clock_gettime
+redis-1    | 2026-06-16T18:44:43.458010344Z 1:M 16 Jun 2026 18:44:43.457 * Running mode=standalone, port=6379.
+redis-1    | 2026-06-16T18:44:43.461006247Z 1:M 16 Jun 2026 18:44:43.460 * Server initialized
+redis-1    | 2026-06-16T18:44:43.465633298Z 1:M 16 Jun 2026 18:44:43.465 * Creating AOF base file appendonly.aof.1.base.rdb on server start
+redis-1    | 2026-06-16T18:44:43.469905523Z 1:M 16 Jun 2026 18:44:43.468 * Creating AOF incr file appendonly.aof.1.incr.aof on server start
+redis-1    | 2026-06-16T18:44:43.469934093Z 1:M 16 Jun 2026 18:44:43.468 * Ready to accept connections tcp
+web-1      | 2026-06-16T18:46:22.544629092Z [2026-06-16 18:46:22 +0000] [1] [INFO] Starting gunicorn 22.0.0
+postgres-1  | 2026-06-16T18:44:43.548513031Z The files belonging to this database system will be owned by user "postgres".
+postgres-1  | 2026-06-16T18:44:43.548590182Z This user must also own the server process.
+postgres-1  | 2026-06-16T18:44:43.548598652Z 
+postgres-1  | 2026-06-16T18:44:43.548794376Z The database cluster will be initialized with locale "en_US.utf8".
+postgres-1  | 2026-06-16T18:44:43.548876487Z The default database encoding has accordingly been set to "UTF8".
+postgres-1  | 2026-06-16T18:44:43.548886568Z The default text search configuration will be set to "english".
+postgres-1  | 2026-06-16T18:44:43.548965669Z 
+postgres-1  | 2026-06-16T18:44:43.548974889Z Data page checksums are disabled.
+postgres-1  | 2026-06-16T18:44:43.549023850Z 
+postgres-1  | 2026-06-16T18:44:43.549263434Z fixing permissions on existing directory /var/lib/postgresql/data ... ok
+postgres-1  | 2026-06-16T18:44:43.551447972Z creating subdirectories ... ok
+postgres-1  | 2026-06-16T18:44:43.551517894Z selecting dynamic shared memory implementation ... posix
+postgres-1  | 2026-06-16T18:44:43.581255915Z selecting default max_connections ... 100
+postgres-1  | 2026-06-16T18:44:43.620773648Z selecting default shared_buffers ... 128MB
+postgres-1  | 2026-06-16T18:44:43.707336946Z selecting default time zone ... UTC
+postgres-1  | 2026-06-16T18:44:43.709698457Z creating configuration files ... ok
+postgres-1  | 2026-06-16T18:44:43.999614890Z running bootstrap script ... ok
+postgres-1  | 2026-06-16T18:44:44.398623425Z sh: locale: not found
+postgres-1  | 2026-06-16T18:44:44.398802528Z 2026-06-16 18:44:44.398 UTC [34] WARNING:  no usable system locales were found
+postgres-1  | 2026-06-16T18:44:45.324240553Z performing post-bootstrap initialization ... ok
+postgres-1  | 2026-06-16T18:44:45.433724112Z initdb: warning: enabling "trust" authentication for local connections
+postgres-1  | 2026-06-16T18:44:45.433756333Z initdb: hint: You can change this by editing pg_hba.conf or using the option -A, or --auth-local and --auth-host, the next time you run initdb.
+postgres-1  | 2026-06-16T18:44:45.433637051Z syncing data to disk ... ok
+postgres-1  | 2026-06-16T18:44:45.433879315Z 
+postgres-1  | 2026-06-16T18:44:45.433924256Z 
+postgres-1  | 2026-06-16T18:44:45.433931366Z Success. You can now start the database server using:
+postgres-1  | 2026-06-16T18:44:45.433935806Z 
+postgres-1  | 2026-06-16T18:44:45.433939826Z     pg_ctl -D /var/lib/postgresql/data -l logfile start
+postgres-1  | 2026-06-16T18:44:45.433944036Z 
+postgres-1  | 2026-06-16T18:44:45.513293667Z waiting for server to start....2026-06-16 18:44:45.513 UTC [40] LOG:  starting PostgreSQL 16.14 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+postgres-1  | 2026-06-16T18:44:45.515714890Z 2026-06-16 18:44:45.515 UTC [40] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2026-06-16T18:44:45.525772956Z 2026-06-16 18:44:45.524 UTC [43] LOG:  database system was shut down at 2026-06-16 18:44:45 UTC
+postgres-1  | 2026-06-16T18:44:45.533737016Z 2026-06-16 18:44:45.533 UTC [40] LOG:  database system is ready to accept connections
+postgres-1  | 2026-06-16T18:44:45.576830951Z  done
+postgres-1  | 2026-06-16T18:44:45.576856802Z server started
+postgres-1  | 2026-06-16T18:44:45.709928355Z CREATE DATABASE
+postgres-1  | 2026-06-16T18:44:45.711743597Z 
+postgres-1  | 2026-06-16T18:44:45.711761897Z 
+postgres-1  | 2026-06-16T18:44:45.711767537Z /usr/local/bin/docker-entrypoint.sh: running /docker-entrypoint-initdb.d/init.sql
+postgres-1  | 2026-06-16T18:44:45.751339221Z CREATE TABLE
+postgres-1  | 2026-06-16T18:44:45.754414955Z INSERT 0 3
+postgres-1  | 2026-06-16T18:44:45.760245787Z CREATE INDEX
+postgres-1  | 2026-06-16T18:44:45.761323906Z GRANT
+postgres-1  | 2026-06-16T18:44:45.762073849Z GRANT
+postgres-1  | 2026-06-16T18:44:45.764267568Z 
+postgres-1  | 2026-06-16T18:44:45.764296358Z 
+postgres-1  | 2026-06-16T18:44:45.765584731Z waiting for server to shut down...2026-06-16 18:44:45.765 UTC [40] LOG:  received fast shutdown request
+postgres-1  | 2026-06-16T18:44:45.767574776Z .2026-06-16 18:44:45.767 UTC [40] LOG:  aborting any active transactions
+postgres-1  | 2026-06-16T18:44:45.775736069Z 2026-06-16 18:44:45.775 UTC [40] LOG:  background worker "logical replication launcher" (PID 46) exited with exit code 1
+postgres-1  | 2026-06-16T18:44:45.775978563Z 2026-06-16 18:44:45.775 UTC [41] LOG:  shutting down
+postgres-1  | 2026-06-16T18:44:45.778027639Z 2026-06-16 18:44:45.777 UTC [41] LOG:  checkpoint starting: shutdown immediate
+postgres-1  | 2026-06-16T18:44:45.825156035Z 2026-06-16 18:44:45.824 UTC [41] LOG:  checkpoint complete: wrote 938 buffers (5.7%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.035 s, sync=0.006 s, total=0.050 s; sync files=306, longest=0.002 s, average=0.001 s; distance=4294 kB, estimate=4294 kB; lsn=0/1923F40, redo lsn=0/1923F40
+postgres-1  | 2026-06-16T18:44:45.839773651Z 2026-06-16 18:44:45.839 UTC [40] LOG:  database system is shut down
+postgres-1  | 2026-06-16T18:44:45.866741034Z  done
+postgres-1  | 2026-06-16T18:44:45.866773845Z server stopped
+postgres-1  | 2026-06-16T18:44:45.868525585Z 
+postgres-1  | 2026-06-16T18:44:45.868546846Z PostgreSQL init process complete; ready for start up.
+postgres-1  | 2026-06-16T18:44:45.868552386Z 
+postgres-1  | 2026-06-16T18:44:45.905857020Z 2026-06-16 18:44:45.905 UTC [1] LOG:  starting PostgreSQL 16.14 on x86_64-pc-linux-musl, compiled by gcc (Alpine 15.2.0) 15.2.0, 64-bit
+postgres-1  | 2026-06-16T18:44:45.905929841Z 2026-06-16 18:44:45.905 UTC [1] LOG:  listening on IPv4 address "0.0.0.0", port 5432
+postgres-1  | 2026-06-16T18:44:45.906044493Z 2026-06-16 18:44:45.905 UTC [1] LOG:  listening on IPv6 address "::", port 5432
+postgres-1  | 2026-06-16T18:44:45.910532612Z 2026-06-16 18:44:45.910 UTC [1] LOG:  listening on Unix socket "/var/run/postgresql/.s.PGSQL.5432"
+postgres-1  | 2026-06-16T18:44:45.918504932Z 2026-06-16 18:44:45.918 UTC [58] LOG:  database system was shut down at 2026-06-16 18:44:45 UTC
+postgres-1  | 2026-06-16T18:44:45.929460544Z 2026-06-16 18:44:45.929 UTC [1] LOG:  database system is ready to accept connections
+postgres-1  | 2026-06-16T18:49:46.017412226Z 2026-06-16 18:49:46.017 UTC [56] LOG:  checkpoint starting: time
+postgres-1  | 2026-06-16T18:49:50.143107633Z 2026-06-16 18:49:50.142 UTC [56] LOG:  checkpoint complete: wrote 44 buffers (0.3%); 0 WAL file(s) added, 0 removed, 0 recycled; write=4.115 s, sync=0.004 s, total=4.126 s; sync files=13, longest=0.002 s, average=0.001 s; distance=249 kB, estimate=249 kB; lsn=0/1962678, redo lsn=0/1962640
+postgres-1  | 2026-06-16T18:54:46.240350985Z 2026-06-16 18:54:46.239 UTC [56] LOG:  checkpoint starting: time
+postgres-1  | 2026-06-16T18:54:46.853745493Z 2026-06-16 18:54:46.853 UTC [56] LOG:  checkpoint complete: wrote 7 buffers (0.0%); 0 WAL file(s) added, 0 removed, 0 recycled; write=0.604 s, sync=0.003 s, total=0.614 s; sync files=7, longest=0.002 s, average=0.001 s; distance=1 kB, estimate=224 kB; lsn=0/1962C38, redo lsn=0/1962C00
+web-1       | 2026-06-16T18:46:22.545978095Z [2026-06-16 18:46:22 +0000] [1] [INFO] Listening at: http://0.0.0.0:5000 (1)
+web-1       | 2026-06-16T18:46:22.546527305Z [2026-06-16 18:46:22 +0000] [1] [INFO] Using worker: sync
+web-1       | 2026-06-16T18:46:22.557024869Z [2026-06-16 18:46:22 +0000] [7] [INFO] Booting worker with pid: 7
+web-1       | 2026-06-16T18:46:22.616122034Z [2026-06-16 18:46:22 +0000] [8] [INFO] Booting worker with pid: 8

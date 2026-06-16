@@ -1,0 +1,6 @@
+NAME                                   IMAGE                           COMMAND                  SERVICE    CREATED          STATUS                   PORTS
+compose-application-stack-adminer-1    adminer:4.8.1                   "entrypoint.sh php -…"   adminer    14 minutes ago   Up 3 minutes             0.0.0.0:8081->8080/tcp, [::]:8081->8080/tcp
+compose-application-stack-nginx-1      nginx:alpine                    "/docker-entrypoint.…"   nginx      2 minutes ago    Up 2 minutes             0.0.0.0:8080->80/tcp, [::]:8080->80/tcp
+compose-application-stack-postgres-1   postgres:16-alpine              "docker-entrypoint.s…"   postgres   14 minutes ago   Up 3 minutes (healthy)   5432/tcp
+compose-application-stack-redis-1      redis:7-alpine                  "docker-entrypoint.s…"   redis      14 minutes ago   Up 3 minutes (healthy)   6379/tcp
+compose-application-stack-web-1        compose-application-stack-web   "gunicorn --bind 0.0…"   web        2 minutes ago    Up 2 minutes (healthy)   5000/tcp
