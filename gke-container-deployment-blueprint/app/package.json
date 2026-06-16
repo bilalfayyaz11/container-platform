@@ -1,0 +1,12 @@
+{
+  "name": "gke-container-runtime",
+  "version": "1.0.0",
+  "description": "Containerized Node.js runtime designed for Kubernetes deployment",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js"
+  },
+  "dependencies": {
+    "express": "^4.18.2"
+  }
+}

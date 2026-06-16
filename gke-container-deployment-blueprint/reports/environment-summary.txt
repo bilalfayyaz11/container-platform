@@ -1,0 +1,10 @@
+Google Cloud container deployment environment prepared.
+
+Project: docker-gke-platform-1781634054
+Region: us-central1
+Zone: us-central1-a
+Repository: container-runtime
+Cluster: container-platform-gke
+
+Modernization:
+Google Container Registry was replaced with Artifact Registry for the container image workflow.

@@ -1,0 +1,7 @@
+     Credentialed Accounts
+ACTIVE  ACCOUNT
+*       bilalfayyaz180@gmail.com
+
+To set the active account, run:
+    $ gcloud config set account `ACCOUNT`
+

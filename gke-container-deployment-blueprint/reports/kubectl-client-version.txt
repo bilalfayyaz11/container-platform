@@ -1,0 +1,2 @@
+Client Version: v1.35.3-dispatcher
+Kustomize Version: v5.7.1

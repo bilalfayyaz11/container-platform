@@ -1,0 +1,23 @@
+Google Cloud deployment blocker detected.
+
+The authenticated account was able to run gcloud commands, but the configured project could not be accessed for Service Usage, Compute Engine, or GKE cluster provisioning.
+
+Observed errors:
+- Project not found or permission denied
+- Permission denied on resource project
+- GKE API could not be confirmed as enabled
+- Cluster credential retrieval failed
+- kubectl defaulted to localhost:8080 because no valid cluster context was created
+
+Impact:
+GKE cluster creation, Artifact Registry deployment, Kubernetes credential retrieval, and external LoadBalancer provisioning cannot proceed in this environment without corrected Google Cloud IAM permissions, billing/project access, and API access.
+
+Required permissions:
+- resourcemanager.projects.get
+- serviceusage.services.enable
+- container.clusters.create
+- container.clusters.get
+- artifactregistry.repositories.create
+- artifactregistry.repositories.uploadArtifacts
+- compute.zones.list
+- compute.addresses.create

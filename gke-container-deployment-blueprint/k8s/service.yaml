@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: container-runtime-service
+  labels:
+    app: container-runtime
+spec:
+  type: LoadBalancer
+  selector:
+    app: container-runtime
+  ports:
+  - name: http
+    port: 80
+    targetPort: 8080
+    protocol: TCP

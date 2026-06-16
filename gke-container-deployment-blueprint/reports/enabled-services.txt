@@ -1,0 +1,12 @@
+ERROR: (gcloud.services.list) [bilalfayyaz180@gmail.com] does not have permission to access projects instance [docker-gke-platform-1781634054] (or it may not exist): Project 'docker-gke-platform-1781634054' not found or permission denied.
+Help Token: AfYMUria4faQ986seezFy7Vth6f9EcExz5_167U0nlIoAmZxsNsONIhIJI5ZQRSIPHL5wHOjhCcbjdwqb-PddegiFjL2k1i3tNI2RdVthaK_XJgz. This command is authenticated as bilalfayyaz180@gmail.com which is the active account specified by the [core/account] property
+- '@type': type.googleapis.com/google.rpc.PreconditionFailure
+  violations:
+  - subject: ?error_code=210002&type=Project&resource_id=docker-gke-platform-1781634054
+    type: googleapis.com
+- '@type': type.googleapis.com/google.rpc.ErrorInfo
+  domain: serviceusage.googleapis.com
+  metadata:
+    resource_id: docker-gke-platform-1781634054
+    type: Project
+  reason: RESOURCES_NOT_FOUND

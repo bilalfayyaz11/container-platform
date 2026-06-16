@@ -1,0 +1,9 @@
+[compute]
+region = us-central1
+zone = us-central1-a
+[core]
+account = bilalfayyaz180@gmail.com
+disable_usage_reporting = True
+project = docker-gke-platform-1781634054
+
+Your active configuration is: [default]

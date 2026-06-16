@@ -1,0 +1,5 @@
+
+> gke-container-runtime@1.0.0 start
+> node app.js
+
+Server running on port 8080
