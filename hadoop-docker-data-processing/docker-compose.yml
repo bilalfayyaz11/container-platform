@@ -1,0 +1,94 @@
+services:
+  namenode:
+    image: apache/hadoop:3.3.6
+    container_name: hadoop-namenode
+    hostname: namenode
+    ports:
+      - "9870:9870"
+      - "9000:9000"
+    volumes:
+      - ./config/hadoop:/opt/hadoop/etc/hadoop
+      - ./data/namenode:/hadoop/dfs/name
+      - ./data/logs:/opt/hadoop/logs
+    environment:
+      CLUSTER_NAME: hadoop-cluster
+    command: >
+      bash -c "
+      hdfs namenode -format -force &&
+      hdfs namenode
+      "
+    networks:
+      - hadoop-network
+
+  datanode:
+    image: apache/hadoop:3.3.6
+    container_name: hadoop-datanode
+    hostname: datanode
+    ports:
+      - "9864:9864"
+    volumes:
+      - ./config/hadoop:/opt/hadoop/etc/hadoop
+      - ./data/datanode:/hadoop/dfs/data
+      - ./data/logs:/opt/hadoop/logs
+    environment:
+      CLUSTER_NAME: hadoop-cluster
+    command: hdfs datanode
+    depends_on:
+      - namenode
+    networks:
+      - hadoop-network
+
+  resourcemanager:
+    image: apache/hadoop:3.3.6
+    container_name: hadoop-resourcemanager
+    hostname: resourcemanager
+    ports:
+      - "8088:8088"
+    volumes:
+      - ./config/hadoop:/opt/hadoop/etc/hadoop
+      - ./data/logs:/opt/hadoop/logs
+    environment:
+      CLUSTER_NAME: hadoop-cluster
+    command: yarn resourcemanager
+    depends_on:
+      - namenode
+    networks:
+      - hadoop-network
+
+  nodemanager:
+    image: apache/hadoop:3.3.6
+    container_name: hadoop-nodemanager
+    hostname: nodemanager
+    ports:
+      - "8042:8042"
+    volumes:
+      - ./config/hadoop:/opt/hadoop/etc/hadoop
+      - ./data/logs:/opt/hadoop/logs
+    environment:
+      CLUSTER_NAME: hadoop-cluster
+    command: yarn nodemanager
+    depends_on:
+      - resourcemanager
+    networks:
+      - hadoop-network
+
+  historyserver:
+    image: apache/hadoop:3.3.6
+    container_name: hadoop-historyserver
+    hostname: historyserver
+    ports:
+      - "19888:19888"
+    volumes:
+      - ./config/hadoop:/opt/hadoop/etc/hadoop
+      - ./data/logs:/opt/hadoop/logs
+    environment:
+      CLUSTER_NAME: hadoop-cluster
+    command: mapred historyserver
+    depends_on:
+      - namenode
+    networks:
+      - hadoop-network
+
+networks:
+  hadoop-network:
+    driver: bridge
