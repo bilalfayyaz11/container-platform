@@ -1,0 +1,5 @@
+{
+  "proc_sys_write": false,
+  "message": "write blocked by read-only filesystem or security policy",
+  "error": "[Errno 30] Read-only file system: '/proc/sys/kernel/hostname'"
+}

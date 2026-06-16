@@ -1,0 +1,49 @@
+.
+├── Dockerfile
+├── SECURITY.md
+├── app
+│   └── server.py
+├── apparmor
+│   └── docker-hardened-python
+├── reports
+│   ├── apparmor-audit-tail.txt
+│   ├── apparmor-proc-sys-write-response.json
+│   ├── apparmor-runtime-container.json
+│   ├── apparmor-service-status.txt
+│   ├── apparmor-shadow-read-response.json
+│   ├── apparmor-status-after-profile.txt
+│   ├── apparmor-status-before-profile.txt
+│   ├── apparmor-summary.txt
+│   ├── bin-write-check.txt
+│   ├── capability-baseline.txt
+│   ├── content-trust-results.txt
+│   ├── docker-info.txt
+│   ├── docker-version.txt
+│   ├── final-hardened-container-inspect.json
+│   ├── final-hardened-container-logs.txt
+│   ├── final-non-root-id.txt
+│   ├── final-runtime-controls.txt
+│   ├── final-runtime-response.json
+│   ├── final-shadow-response.json
+│   ├── final-workspace-tree.txt
+│   ├── hardened-image-build.log
+│   ├── hardened-image-history.txt
+│   ├── hardened-image-inspect.json
+│   ├── hardened-runtime-container.json
+│   ├── hardened-runtime-logs.txt
+│   ├── local-registry-pull.log
+│   ├── local-registry-push.log
+│   ├── non-root-id-check.txt
+│   ├── pip-version.txt
+│   ├── proc-sys-write-response.json
+│   ├── python-version.txt
+│   ├── runtime-identity-response.json
+│   ├── security-manifest-copy.md
+│   ├── shadow-read-response.json
+│   ├── tmp-write-check.txt
+│   └── toolchain-summary.txt
+└── scripts
+    ├── content-trust-validation.sh
+    └── run-hardened-runtime.sh
+
+5 directories, 42 files

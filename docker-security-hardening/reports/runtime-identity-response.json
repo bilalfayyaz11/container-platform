@@ -1,0 +1,13 @@
+{
+  "status": "running",
+  "uid": 10001,
+  "gid": 10001,
+  "user": "appuser",
+  "group": "appuser",
+  "writable_paths": {
+    "/tmp": true,
+    "/app": "OSError: [Errno 30] Read-only file system: '/app/write-probe'",
+    "/bin": "OSError: [Errno 30] Read-only file system: '/bin/write-probe'",
+    "/etc": "OSError: [Errno 30] Read-only file system: '/etc/write-probe'"
+  }
+}

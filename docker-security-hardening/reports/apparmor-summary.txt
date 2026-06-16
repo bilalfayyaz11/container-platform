@@ -1,0 +1,5 @@
+AppArmor enforcement was configured using a custom profile named docker-hardened-python.
+
+The profile was installed under /etc/apparmor.d/, loaded with apparmor_parser, verified with aa-status, and applied to the Docker container using --security-opt apparmor=docker-hardened-python.
+
+The profile explicitly denies read access to /etc/shadow and write access to /proc/sys/** while allowing the Python HTTP server to run and serve TCP traffic.

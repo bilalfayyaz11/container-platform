@@ -1,0 +1,9 @@
+Docker Content Trust validation attempt completed.
+
+Signed tag pull exit code: 0
+Unsigned tag pull exit code: 0
+
+Explanation:
+Docker Content Trust requires a Notary-compatible trust service in addition to the image registry.
+The local registry:2 container stores image manifests and layers, but it does not provide a Notary signing backend.
+This is why DCT verification may fail or not behave as the lab text expects when only registry:2 is deployed.

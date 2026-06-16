@@ -1,0 +1,5 @@
+{
+  "shadow_read": false,
+  "message": "permission denied or blocked by security policy",
+  "error": "[Errno 13] Permission denied: '/etc/shadow'"
+}

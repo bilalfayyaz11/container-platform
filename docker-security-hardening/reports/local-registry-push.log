@@ -1,0 +1,17 @@
+The push refers to repository [localhost:5000/hardened-python-runtime]
+4b6b2afbcb1e: Waiting
+d978e482527e: Waiting
+5ad67355bf22: Waiting
+4437c02a7a4f: Waiting
+72c03230f136: Waiting
+b86f774c4f0c: Waiting
+d978e482527e: Pushed
+4437c02a7a4f: Pushed
+234dfef1cbe2: Pushed
+6dc8148c4b61: Pushed
+b86f774c4f0c: Pushed
+6ec7f4e699d7: Pushed
+5ad67355bf22: Pushed
+4b6b2afbcb1e: Pushed
+72c03230f136: Pushed
+1.0.0: digest: sha256:767b9457efd6626cb6e9ff4c172b8c9f0227ab232c4280bbe246334a9a73648b size: 856

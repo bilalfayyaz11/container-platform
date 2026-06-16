@@ -1,0 +1,38 @@
+#include <tunables/global>
+
+profile docker-hardened-python flags=(attach_disconnected,mediate_deleted) {
+  #include <abstractions/base>
+
+  network inet stream,
+  network inet6 stream,
+
+  capability net_bind_service,
+
+  deny /etc/shadow r,
+  deny /proc/sys/** w,
+
+  /usr/local/bin/python3.12 ix,
+  /usr/local/bin/python3 ix,
+  /usr/local/bin/python ix,
+  /usr/local/lib/python3.12/** r,
+  /usr/local/lib/** r,
+  /lib/** r,
+  /lib64/** r,
+  /usr/lib/** r,
+
+  /app/** r,
+  /tmp/** rw,
+  /dev/null rw,
+  /dev/urandom r,
+  /etc/ld.so.cache r,
+  /etc/nsswitch.conf r,
+  /etc/passwd r,
+  /etc/group r,
+  /etc/hosts r,
+  /etc/hostname r,
+  /etc/resolv.conf r,
+
+  /proc/self/** r,
+  /proc/thread-self/** r,
+  /proc/sys/kernel/hostname r,
+}
