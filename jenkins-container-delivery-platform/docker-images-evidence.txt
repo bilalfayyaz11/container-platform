@@ -1,0 +1,8 @@
+===== DOCKER IMAGES =====
+IMAGE                                   ID             DISK USAGE   CONTENT SIZE   EXTRA
+jenkins-container-pipeline:local        15021f3c969f        273MB         62.6MB        
+jenkins-container-pipeline:validation   6205570ca0da        273MB         62.6MB        
+jenkins-webhook-listener:local          59916f1eb308         82MB         20.5MB   U    
+jenkins/jenkins:lts-jdk21               e82bbdcffb63        810MB          292MB   U    
+node:20-alpine                          fb4cd12c85ee        194MB         48.8MB        
+python:3.12-alpine                      f7fd610959ca       74.6MB         18.7MB        

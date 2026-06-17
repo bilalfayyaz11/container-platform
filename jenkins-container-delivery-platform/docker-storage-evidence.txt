@@ -1,0 +1,11 @@
+===== DOCKER STORAGE =====
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          6         2         1.174GB   981.2MB (83%)
+Containers      2         2         7.283MB   0B (0%)
+Local Volumes   1         1         115.4MB   0B (0%)
+Build Cache     0         0         0B        0B
+TYPE            TOTAL     ACTIVE    SIZE      RECLAIMABLE
+Images          6         2         1.174GB   981.2MB (83%)
+Containers      2         2         7.283MB   0B (0%)
+Local Volumes   1         1         115.4MB   0B (0%)
+Build Cache     0         0         0B        0B

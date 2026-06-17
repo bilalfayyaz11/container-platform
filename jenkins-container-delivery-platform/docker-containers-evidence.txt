@@ -1,0 +1,4 @@
+===== DOCKER CONTAINERS =====
+CONTAINER ID   IMAGE                            COMMAND                  CREATED              STATUS              PORTS                                                                                          NAMES
+ae67bdcc99ae   jenkins-webhook-listener:local   "python3 webhook-lis…"   About a minute ago   Up About a minute                                                                                                  jenkins-webhook-listener
+8a1b2ae70f56   jenkins/jenkins:lts-jdk21        "/usr/bin/tini -- /u…"   15 minutes ago       Up 13 minutes       0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp, 0.0.0.0:50000->50000/tcp, [::]:50000->50000/tcp   jenkins-controller

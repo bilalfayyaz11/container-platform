@@ -1,0 +1,13 @@
+===== JENKINS CONTAINER =====
+CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS          PORTS                                                                                          NAMES
+8a1b2ae70f56   jenkins/jenkins:lts-jdk21   "/usr/bin/tini -- /u…"   15 minutes ago   Up 13 minutes   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp, 0.0.0.0:50000->50000/tcp, [::]:50000->50000/tcp   jenkins-controller
+
+===== JENKINS LOGS =====
+Running from: /usr/share/jenkins/jenkins.war
+webroot: /var/jenkins_home/war
+Running from: /usr/share/jenkins/jenkins.war
+webroot: /var/jenkins_home/war
+
+===== JENKINS VOLUME =====
+local     jenkins_home
+local     jenkins_home

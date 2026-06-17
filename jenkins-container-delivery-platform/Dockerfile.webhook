@@ -1,0 +1,11 @@
+FROM python:3.12-alpine
+
+RUN apk add --no-cache curl
+
+WORKDIR /app
+
+COPY webhook-listener.py /app/webhook-listener.py
+
+EXPOSE 8081
+
+CMD ["python3", "webhook-listener.py"]

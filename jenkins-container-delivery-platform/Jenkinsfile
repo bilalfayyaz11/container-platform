@@ -1,0 +1,128 @@
+pipeline {
+    agent any
+
+    environment {
+        DOCKER_IMAGE = 'jenkins-container-pipeline'
+        DOCKER_TAG = "${BUILD_NUMBER}"
+        STAGING_CONTAINER = "jenkins-container-staging-${BUILD_NUMBER}"
+        TEST_CONTAINER = "jenkins-container-test-${BUILD_NUMBER}"
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                sh 'rm -rf source || true'
+                sh 'git clone /var/jenkins_home/jenkins-container-pipeline.git source'
+                dir('source') {
+                    sh 'git status'
+                    sh 'ls -la'
+                }
+            }
+        }
+
+        stage('Install and Test') {
+            steps {
+                dir('source') {
+                    sh 'npm ci'
+                    sh 'npm test'
+                }
+            }
+        }
+
+        stage('Build Docker Image') {
+            steps {
+                dir('source') {
+                    sh '''
+                        docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} .
+                        docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest
+                    '''
+                }
+            }
+        }
+
+        stage('Run Tests in Container') {
+            steps {
+                dir('source') {
+                    sh '''
+                        docker run --rm \
+                          -v "$PWD:/app" \
+                          -w /app \
+                          node:20-alpine \
+                          sh -c "npm ci && npm test"
+                    '''
+                }
+            }
+        }
+
+        stage('Security Scan') {
+            steps {
+                sh '''
+                    echo "Running Trivy image scan..."
+                    docker run --rm \
+                      -v /var/run/docker.sock:/var/run/docker.sock \
+                      aquasec/trivy:latest image \
+                      --severity CRITICAL,HIGH \
+                      --no-progress \
+                      ${DOCKER_IMAGE}:${DOCKER_TAG} || true
+                '''
+            }
+        }
+
+        stage('Integration Test') {
+            steps {
+                sh '''
+                    docker rm -f ${TEST_CONTAINER} >/dev/null 2>&1 || true
+
+                    docker run -d \
+                      --name ${TEST_CONTAINER} \
+                      -p 3001:3000 \
+                      ${DOCKER_IMAGE}:${DOCKER_TAG}
+
+                    sleep 10
+
+                    curl -fsS http://localhost:3001/
+                    curl -fsS http://localhost:3001/health
+                '''
+            }
+            post {
+                always {
+                    sh 'docker rm -f ${TEST_CONTAINER} || true'
+                }
+            }
+        }
+
+        stage('Deploy Staging Container') {
+            steps {
+                sh '''
+                    docker rm -f jenkins-container-staging >/dev/null 2>&1 || true
+
+                    docker run -d \
+                      --name jenkins-container-staging \
+                      -p 3002:3000 \
+                      --restart unless-stopped \
+                      ${DOCKER_IMAGE}:${DOCKER_TAG}
+
+                    sleep 8
+
+                    curl -fsS http://localhost:3002/health
+                '''
+            }
+        }
+    }
+
+    post {
+        always {
+            sh '''
+                docker image prune -f || true
+                docker ps -a
+                docker images | grep jenkins-container-pipeline || true
+            '''
+        }
+        success {
+            echo 'Jenkins Docker pipeline completed successfully.'
+        }
+        failure {
+            echo 'Jenkins Docker pipeline failed. Review console logs.'
+        }
+    }
+}

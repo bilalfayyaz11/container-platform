@@ -1,0 +1,70 @@
+===== JENKINS CONTAINER =====
+CONTAINER ID   IMAGE                       COMMAND                  CREATED          STATUS          PORTS                                                                                          NAMES
+8a1b2ae70f56   jenkins/jenkins:lts-jdk21   "/usr/bin/tini -- /u…"   14 minutes ago   Up 13 minutes   0.0.0.0:8080->8080/tcp, [::]:8080->8080/tcp, 0.0.0.0:50000->50000/tcp, [::]:50000->50000/tcp   jenkins-controller
+
+===== WEBHOOK CONTAINER =====
+CONTAINER ID   IMAGE                            COMMAND                  CREATED              STATUS              PORTS     NAMES
+ae67bdcc99ae   jenkins-webhook-listener:local   "python3 webhook-lis…"   About a minute ago   Up About a minute             jenkins-webhook-listener
+
+===== NODE TESTS =====
+
+> jenkins-container-pipeline@1.0.0 test
+> jest --runInBand
+
+
+===== DOCKER BUILD =====
+Sending build context to Docker daemon  202.2kB
+Step 1/10 : FROM node:20-alpine
+ ---> fb4cd12c85ee
+Step 2/10 : WORKDIR /app
+ ---> Using cache
+ ---> 3f9fe7fb9a81
+Step 3/10 : COPY package*.json ./
+ ---> Using cache
+ ---> 03a8e680e8cd
+Step 4/10 : RUN npm ci
+ ---> Using cache
+ ---> 32c8033f6aee
+Step 5/10 : COPY . .
+ ---> 4596ea65e168
+Step 6/10 : EXPOSE 3000
+ ---> Running in 8147d0783e65
+ ---> Removed intermediate container 8147d0783e65
+ ---> 82bf2bda242c
+Step 7/10 : RUN addgroup -g 1001 -S appgroup &&     adduser -S appuser -u 1001 -G appgroup
+ ---> Running in e8ea7935b67d
+ ---> Removed intermediate container e8ea7935b67d
+ ---> 9ad1d92a28eb
+Step 8/10 : USER appuser
+ ---> Running in 982ca5e7513a
+ ---> Removed intermediate container 982ca5e7513a
+ ---> add8e3c5549d
+Step 9/10 : HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3   CMD node -e "require('http').get('http://localhost:3000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) }).on('error', () => process.exit(1))"
+ ---> Running in 58629c49996d
+ ---> Removed intermediate container 58629c49996d
+ ---> 38ae652c88b7
+Step 10/10 : CMD ["npm", "start"]
+ ---> Running in fe91b6e5b00c
+ ---> Removed intermediate container fe91b6e5b00c
+ ---> 6205570ca0da
+Successfully built 6205570ca0da
+Successfully tagged jenkins-container-pipeline:validation
+
+===== STAGING HEALTH CHECK =====
+
+===== REQUIRED FILE CHECK =====
+PASS: app.js
+PASS: package.json
+PASS: package-lock.json
+PASS: Dockerfile
+PASS: docker-compose.test.yml
+PASS: Jenkinsfile
+PASS: Jenkinsfile.dockerhub
+PASS: jenkins-job-config.xml
+PASS: monitor-builds.sh
+PASS: collect-metrics.sh
+PASS: webhook-listener.py
+PASS: Dockerfile.webhook
+PASS: dockerhub-credentials-notes.md
+
+===== VALIDATION COMPLETE =====
