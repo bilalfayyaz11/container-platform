@@ -1,0 +1,6 @@
+===== PERMISSION LIMITATION =====
+AWS Account: 698355729228
+Role: arn:aws:sts::698355729228:assumed-role/AL-NAFI-CLOUD-LABS-Role/i-093ef8af63e49cc39
+Blocked action: ecr:ListImages
+Blocked resource: arn:aws:ecr:us-east-1:698355729228:repository/containerized-lambda-runtime
+Reason: no identity-based policy allows ecr:ListImages

@@ -1,0 +1,3 @@
+===== LOCAL IMAGE EVIDENCE =====
+698355729228.dkr.ecr.us-east-1.amazonaws.com/containerized-lambda-runtime:latest   3aa35f027042        774MB          196MB        
+containerized-lambda-runtime:latest                                                3aa35f027042        774MB          196MB        

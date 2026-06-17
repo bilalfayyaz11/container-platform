@@ -1,0 +1,12 @@
+===== AWS IDENTITY =====
+{
+    "UserId": "AROA2FGJ6YNGBX2STWY5V:i-093ef8af63e49cc39",
+    "Account": "698355729228",
+    "Arn": "arn:aws:sts::698355729228:assumed-role/AL-NAFI-CLOUD-LABS-Role/i-093ef8af63e49cc39"
+}
+===== ECR CHECK =====
+===== LAMBDA CHECK =====
+===== API GATEWAY CHECK =====
+===== CLOUDWATCH LOGS CHECK =====
+===== IAM ROLE CHECK =====
+===== PERMISSION CHECK COMPLETE =====

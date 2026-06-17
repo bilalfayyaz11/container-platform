@@ -1,0 +1,2 @@
+===== IMAGE URI EVIDENCE =====
+698355729228.dkr.ecr.us-east-1.amazonaws.com/containerized-lambda-runtime:latest
