@@ -1,0 +1,3 @@
+===== FINAL DOCKER IMAGES =====
+github-actions-container-pipeline:local        f1c2eed1c83c        202MB         49.8MB        
+github-actions-container-pipeline:validation   f1c2eed1c83c        202MB         49.8MB        

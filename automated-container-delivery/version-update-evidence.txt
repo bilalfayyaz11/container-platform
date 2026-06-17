@@ -1,0 +1,5 @@
+===== VERSION AFTER UPDATE =====
+1.0.1
+===== APP VERSION LINE =====
+    version: "1.0.1"
+    version: "1.0.1"

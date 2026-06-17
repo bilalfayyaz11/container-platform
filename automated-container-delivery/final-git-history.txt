@@ -1,0 +1,5 @@
+===== FINAL GIT HISTORY =====
+dc6a3ea (HEAD -> main) Add Docker Hub publishing readiness workflow
+9b1fe46 Create automated container delivery pipeline
+dc6a3ea (HEAD -> main) Add Docker Hub publishing readiness workflow
+9b1fe46 Create automated container delivery pipeline

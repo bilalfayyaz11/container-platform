@@ -1,0 +1,61 @@
+===== REQUIRED FILE CHECK =====
+PASS: package.json
+PASS: package-lock.json
+PASS: app.js
+PASS: test.js
+PASS: Dockerfile
+PASS: docker-compose.yml
+PASS: nginx.conf
+PASS: .github/workflows/container-pipeline.yml
+PASS: scripts/integration-test.sh
+PASS: scripts/update-version.sh
+PASS: docker-hub-secrets.md
+PASS: docker-hub-publishing-readiness.md
+PASS: .gitignore
+PASS: .dockerignore
+===== NODE TEST =====
+
+> github-actions-container-pipeline@1.0.1 test
+> node test.js
+
+Starting health check test...
+Server running on port 3000
+Health check passed.
+===== DOCKER BUILD =====
+Sending build context to Docker daemon  97.28kB
+Step 1/10 : FROM node:20-alpine
+ ---> fb4cd12c85ee
+Step 2/10 : WORKDIR /usr/src/app
+ ---> Using cache
+ ---> 7d0beec24b33
+Step 3/10 : COPY package*.json ./
+ ---> Using cache
+ ---> 125c8ef990d7
+Step 4/10 : RUN npm ci --omit=dev
+ ---> Using cache
+ ---> 9c0d70bd716a
+Step 5/10 : COPY app.js test.js ./
+ ---> Using cache
+ ---> 3bf3a80de1be
+Step 6/10 : EXPOSE 3000
+ ---> Using cache
+ ---> d9606a07176e
+Step 7/10 : RUN addgroup -g 1001 -S appgroup &&     adduser -S appuser -u 1001 -G appgroup
+ ---> Using cache
+ ---> 603357525232
+Step 8/10 : USER appuser
+ ---> Using cache
+ ---> b3e24ba5ff5a
+Step 9/10 : HEALTHCHECK --interval=30s --timeout=3s --start-period=10s --retries=3   CMD node -e "require('http').get('http://localhost:3000/health', (res) => { process.exit(res.statusCode === 200 ? 0 : 1) }).on('error', () => process.exit(1))"
+ ---> Using cache
+ ---> 38f3174a6717
+Step 10/10 : CMD ["npm", "start"]
+ ---> Using cache
+ ---> f1c2eed1c83c
+Successfully built f1c2eed1c83c
+Successfully tagged github-actions-container-pipeline:validation
+===== COMPOSE CONFIG =====
+PASS: Docker Compose configuration is valid
+===== WORKFLOW YAML PRESENCE =====
+PASS: Workflow includes build, compose test, and publish actions
+===== VALIDATION COMPLETE =====

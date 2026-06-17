@@ -1,0 +1,16 @@
+{
+  "name": "github-actions-container-pipeline",
+  "version": "1.0.1",
+  "description": "Node.js service with Docker build automation and GitHub Actions CI/CD",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "test": "node test.js"
+  },
+  "dependencies": {
+    "express": "^4.18.3"
+  },
+  "devDependencies": {},
+  "author": "Bilal Fayyaz",
+  "license": "MIT"
+}
