@@ -1,0 +1,84 @@
+16:44:58.797 INFO [LoggingOptions.getTracer] - Using null tracer
+16:44:58.920 INFO [BoundZmqEventBus.<init>] - XPUB binding to [binding to tcp://*:4442, advertising as tcp://172.17.0.2:4442], XSUB binding to [binding to tcp://*:4443, advertising as tcp://172.17.0.2:4443]
+16:44:58.976 INFO [ZmqUtils.configureHeartbeat] - ZMQ XPUB socket heartbeat configured: interval=60s, timeout=180s, ttl=360s
+16:44:59.018 INFO [ZmqUtils.configureHeartbeat] - ZMQ XSUB socket heartbeat configured: interval=60s, timeout=180s, ttl=360s
+16:44:59.127 INFO [UnboundZmqEventBus.<init>] - Connecting to tcp://172.17.0.2:4442 and tcp://172.17.0.2:4443
+16:44:59.192 INFO [ZmqUtils.configureHeartbeat] - ZMQ SUB socket heartbeat configured: interval=60s, timeout=180s, ttl=360s
+16:44:59.206 INFO [ZmqUtils.configureHeartbeat] - ZMQ PUB socket heartbeat configured: interval=60s, timeout=180s, ttl=360s
+16:44:59.220 INFO [UnboundZmqEventBus.<init>] - Sockets created
+16:45:00.236 INFO [UnboundZmqEventBus.<init>] - Event bus ready
+16:45:02.425 INFO [LoggingOptions.getTracer] - Using null tracer
+16:45:02.511 INFO [NodeOptions.getSessionFactories] - Detected 2 available processors
+16:45:02.654 INFO [NodeOptions.report] - Adding chrome for {"browserName": "chrome","browserVersion": "148.0","container:hostname": "5871b92a7c0e","goog:chromeOptions": {"binary": "\u002fusr\u002fbin\u002fgoogle-chrome"},"platformName": "linux","se:containerName": "5871b92a7c0e","se:deleteSessionOnUi": true,"se:downloadsEnabled": true,"se:noVncPort": 7900,"se:vncEnabled": true} 1 times
+16:45:02.787 INFO [Node.<init>] - Binding additional locator mechanisms: relative
+16:45:02.882 INFO [LocalGridModel.setAvailability] - Switching Node ffdb6cff-0963-4fad-b99f-58aa25934072 (uri: http://172.17.0.2:4444) from DOWN to UP
+16:45:02.886 INFO [LocalNodeRegistry.add] - Added node ffdb6cff-0963-4fad-b99f-58aa25934072 at http://172.17.0.2:4444. Health check every 120s
+16:45:03.336 INFO [Standalone.execute] - Started Selenium Standalone 4.44.0 (revision da2039bd14*): http://172.17.0.2:4444
+16:46:04.767 INFO [LocalDistributor.newSession] - Session request received by the Distributor: 
+ [Capabilities {browserName: chrome, goog:chromeOptions: {args: [--no-sandbox, --disable-dev-shm-usage, --disable-gpu, --disable-extensions, --window-size=1365,768], extensions: []}, pageLoadStrategy: normal}]
+16:46:08.210 INFO [LocalNode.newSession] - Session created by the Node. Id: b2c86b9803cd7a7c0ea507b8c59a32b6, Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42809}, goog:processID: 190, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:46:08.240 INFO [LocalSessionMap.add] - Added session to local Session Map, Id: b2c86b9803cd7a7c0ea507b8c59a32b6, Node: http://172.17.0.2:4444
+16:46:08.246 INFO [LocalDistributor.newSession] - Session created by the Distributor. Id: b2c86b9803cd7a7c0ea507b8c59a32b6 
+ Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:42809}, goog:processID: 190, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:46:10.309 INFO [LocalNode.stopTimedOutSession] - Session id b2c86b9803cd7a7c0ea507b8c59a32b6 is stopping on demand...
+16:46:10.312 INFO [SessionSlot.stop] - Stopping session b2c86b9803cd7a7c0ea507b8c59a32b6 (reason: QUIT_COMMAND)
+16:46:10.312 INFO [SessionSlot.stop] - Session stopped successfully: b2c86b9803cd7a7c0ea507b8c59a32b6
+16:46:10.333 INFO [LocalGridModel.release] - Releasing slot for session id b2c86b9803cd7a7c0ea507b8c59a32b6
+16:46:10.340 INFO [LocalSessionMap.removeWithReason] - Deleted session from local Session Map, Id: b2c86b9803cd7a7c0ea507b8c59a32b6, Node: http://172.17.0.2:4444, Reason: session closed normally (QUIT command)
+16:46:10.383 INFO [LocalDistributor.newSession] - Session request received by the Distributor: 
+ [Capabilities {browserName: chrome, goog:chromeOptions: {args: [--no-sandbox, --disable-dev-shm-usage, --disable-gpu, --disable-extensions, --window-size=1365,768], extensions: []}, pageLoadStrategy: normal}]
+16:46:11.928 INFO [LocalNode.newSession] - Session created by the Node. Id: fc2c10dfd587b472ccd1b8a8654709e3, Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43127}, goog:processID: 316, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:46:11.952 INFO [LocalSessionMap.add] - Added session to local Session Map, Id: fc2c10dfd587b472ccd1b8a8654709e3, Node: http://172.17.0.2:4444
+16:46:11.969 INFO [LocalDistributor.newSession] - Session created by the Distributor. Id: fc2c10dfd587b472ccd1b8a8654709e3 
+ Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:43127}, goog:processID: 316, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:46:15.695 INFO [LocalNode.stopTimedOutSession] - Session id fc2c10dfd587b472ccd1b8a8654709e3 is stopping on demand...
+16:46:15.697 INFO [SessionSlot.stop] - Stopping session fc2c10dfd587b472ccd1b8a8654709e3 (reason: QUIT_COMMAND)
+16:46:15.698 INFO [SessionSlot.stop] - Session stopped successfully: fc2c10dfd587b472ccd1b8a8654709e3
+16:46:15.721 INFO [LocalSessionMap.removeWithReason] - Deleted session from local Session Map, Id: fc2c10dfd587b472ccd1b8a8654709e3, Node: http://172.17.0.2:4444, Reason: session closed normally (QUIT command)
+16:46:15.724 INFO [LocalGridModel.release] - Releasing slot for session id fc2c10dfd587b472ccd1b8a8654709e3
+16:46:17.013 INFO [LocalDistributor.newSession] - Session request received by the Distributor: 
+ [Capabilities {browserName: chrome, goog:chromeOptions: {args: [--no-sandbox, --disable-dev-shm-usage, --disable-gpu, --disable-extensions, --window-size=1365,768], extensions: []}, pageLoadStrategy: normal}]
+16:46:18.556 INFO [LocalNode.newSession] - Session created by the Node. Id: 84865830babec5627fad2220b67ae4ae, Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33741}, goog:processID: 437, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:46:18.576 INFO [LocalSessionMap.add] - Added session to local Session Map, Id: 84865830babec5627fad2220b67ae4ae, Node: http://172.17.0.2:4444
+16:46:18.584 INFO [LocalDistributor.newSession] - Session created by the Distributor. Id: 84865830babec5627fad2220b67ae4ae 
+ Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:33741}, goog:processID: 437, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:46:19.412 WARN [SpanWrappedHttpHandler.execute] - Unable to execute request: Build info: version: '4.44.0', revision: 'da2039bd14*'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.14.0-1018-aws', java.version: '21.0.10'
+Driver info: driver.version: unknown
+org.openqa.selenium.WebDriverException: Build info: version: '4.44.0', revision: 'da2039bd14*'
+System info: os.name: 'Linux', os.arch: 'amd64', os.version: '6.14.0-1018-aws', java.version: '21.0.10'
+Driver info: driver.version: unknown
+	at org.openqa.selenium.remote.http.jdk.JdkHttpClient.execute(JdkHttpClient.java:423)
+	at org.openqa.selenium.remote.tracing.TracedHttpClient.execute(TracedHttpClient.java:54)
+	at org.openqa.selenium.grid.web.ReverseProxyHandler.execute(ReverseProxyHandler.java:86)
+	at org.openqa.selenium.grid.node.DefaultActiveSession.execute(DefaultActiveSession.java:61)
+	at org.openqa.selenium.grid.node.local.SessionSlot.execute(SessionSlot.java:182)
+	at org.openqa.selenium.grid.node.local.LocalNode.lambda$executeWebDriverCommand$1(LocalNode.java:847)
+	at org.openqa.selenium.grid.node.local.LocalNode.callUnchecked(LocalNode.java:868)
+	at org.openqa.selenium.grid.node.local.LocalNode.executeWithInterceptors(LocalNode.java:863)
+	at org.openqa.selenium.grid.node.local.LocalNode.executeWebDriverCommand(LocalNode.java:847)
+	at org.openqa.selenium.grid.node.ForwardWebDriverCommand.execute(ForwardWebDriverCommand.java:48)
+	at org.openqa.selenium.remote.http.Route$PredicatedRoute.handle(Route.java:392)
+	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+	at org.openqa.selenium.remote.tracing.SpanWrappedHttpHandler.execute(SpanWrappedHttpHandler.java:87)
+	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+	at org.openqa.selenium.remote.http.Route$CombinedRoute.handle(Route.java:358)
+	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+	at org.openqa.selenium.grid.node.Node.execute(Node.java:319)
+	at org.openqa.selenium.grid.web.CombinedHandler.execute(CombinedHandler.java:55)
+	at org.openqa.selenium.grid.web.RoutableHttpClientFactory$1.execute(RoutableHttpClientFactory.java:71)
+	at org.openqa.selenium.grid.web.ReverseProxyHandler.execute(ReverseProxyHandler.java:86)
+	at org.openqa.selenium.grid.router.HandleSession.execute(HandleSession.java:231)
+	at org.openqa.selenium.remote.http.Route$PredicatedRoute.handle(Route.java:392)
+	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+	at org.openqa.selenium.remote.http.Route$CombinedRoute.handle(Route.java:358)
+	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+	at org.openqa.selenium.grid.router.Router.execute(Router.java:89)
+	at org.openqa.selenium.grid.web.EnsureSpecCompliantResponseHeaders.lambda$apply$0(EnsureSpecCompliantResponseHeaders.java:34)
+	at org.openqa.selenium.remote.http.Filter$1.execute(Filter.java:63)
+	at org.openqa.selenium.remote.http.Route$CombinedRoute.handle(Route.java:358)
+	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+	at org.openqa.selenium.remote.http.Route$NestedRoute.handle(Route.java:271)
+	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)
+	at org.openqa.selenium.remote.http.Route$CombinedRoute.handle(Route.java:358)
+	at org.openqa.selenium.remote.http.Route.execute(Route.java:69)

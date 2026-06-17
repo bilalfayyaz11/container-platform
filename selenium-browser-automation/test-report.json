@@ -1,0 +1,29 @@
+{
+  "timestamp": "2026-06-17 16:53:01 UTC",
+  "exit_code": 0,
+  "status": "PASSED",
+  "stdout": "Starting Selenium Docker browser automation tests.\n============================================================\nSelenium Grid is ready.\nConnected to Selenium container.\nOpened Selenium homepage.\nPage title: Selenium\nCurrent URL: https://www.selenium.dev/\nBrowser session closed.\nConnected to Selenium container for form test.\nOpened httpbin form page.\nForm submission URL: https://httpbin.org/post\nBrowser session closed.\n============================================================\n{\n  \"started_at\": \"2026-06-17T16:53:02.080080+00:00\",\n  \"finished_at\": \"2026-06-17T16:53:08.041760+00:00\",\n  \"selenium_url\": \"http://localhost:4444/wd/hub\",\n  \"total_tests\": 2,\n  \"passed\": 2,\n  \"failed\": 0,\n  \"results\": [\n    {\n      \"name\": \"selenium_homepage_title_check\",\n      \"status\": \"PASSED\",\n      \"title\": \"Selenium\",\n      \"url\": \"https://www.selenium.dev/\"\n    },\n    {\n      \"name\": \"httpbin_form_interaction\",\n      \"status\": \"PASSED\",\n      \"url\": \"https://httpbin.org/post\",\n      \"contains_customer_name\": true\n    }\n  ]\n}\n",
+  "stderr": "",
+  "test_results": {
+    "started_at": "2026-06-17T16:53:02.080080+00:00",
+    "finished_at": "2026-06-17T16:53:08.041760+00:00",
+    "selenium_url": "http://localhost:4444/wd/hub",
+    "total_tests": 2,
+    "passed": 2,
+    "failed": 0,
+    "results": [
+      {
+        "name": "selenium_homepage_title_check",
+        "status": "PASSED",
+        "title": "Selenium",
+        "url": "https://www.selenium.dev/"
+      },
+      {
+        "name": "httpbin_form_interaction",
+        "status": "PASSED",
+        "url": "https://httpbin.org/post",
+        "contains_customer_name": true
+      }
+    ]
+  }
+}

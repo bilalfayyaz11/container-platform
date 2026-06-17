@@ -1,0 +1,88 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+<title>Selenium Container Test Report</title>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    margin: 40px;
+}
+.header {
+    background: #f2f2f2;
+    padding: 20px;
+    border-radius: 8px;
+}
+.passed {
+    color: green;
+    font-weight: bold;
+}
+.failed {
+    color: red;
+    font-weight: bold;
+}
+.output {
+    background: #f8f8f8;
+    border: 1px solid #ddd;
+    padding: 15px;
+    white-space: pre-wrap;
+}
+</style>
+</head>
+<body>
+
+<div class="header">
+<h1>Selenium Container Automation Report</h1>
+<p><strong>Generated:</strong> 2026-06-17 16:53:01 UTC</p>
+<p><strong>Status:</strong>
+<span class="passed">
+PASSED
+</span>
+</p>
+</div>
+
+<h2>Standard Output</h2>
+<div class="output">Starting Selenium Docker browser automation tests.
+============================================================
+Selenium Grid is ready.
+Connected to Selenium container.
+Opened Selenium homepage.
+Page title: Selenium
+Current URL: https://www.selenium.dev/
+Browser session closed.
+Connected to Selenium container for form test.
+Opened httpbin form page.
+Form submission URL: https://httpbin.org/post
+Browser session closed.
+============================================================
+{
+  "started_at": "2026-06-17T16:53:02.080080+00:00",
+  "finished_at": "2026-06-17T16:53:08.041760+00:00",
+  "selenium_url": "http://localhost:4444/wd/hub",
+  "total_tests": 2,
+  "passed": 2,
+  "failed": 0,
+  "results": [
+    {
+      "name": "selenium_homepage_title_check",
+      "status": "PASSED",
+      "title": "Selenium",
+      "url": "https://www.selenium.dev/"
+    },
+    {
+      "name": "httpbin_form_interaction",
+      "status": "PASSED",
+      "url": "https://httpbin.org/post",
+      "contains_customer_name": true
+    }
+  ]
+}
+</div>
+
+<h2>Error Output</h2>
+<div class="output">
+No errors
+</div>
+
+</body>
+</html>

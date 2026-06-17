@@ -1,0 +1,2 @@
+===== DOCKER IMAGE EVIDENCE =====
+selenium/standalone-chrome:latest   b4d4e3f64280       3.14GB          972MB   U    

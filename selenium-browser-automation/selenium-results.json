@@ -1,0 +1,22 @@
+{
+  "started_at": "2026-06-17T16:53:02.080080+00:00",
+  "finished_at": "2026-06-17T16:53:08.041760+00:00",
+  "selenium_url": "http://localhost:4444/wd/hub",
+  "total_tests": 2,
+  "passed": 2,
+  "failed": 0,
+  "results": [
+    {
+      "name": "selenium_homepage_title_check",
+      "status": "PASSED",
+      "title": "Selenium",
+      "url": "https://www.selenium.dev/"
+    },
+    {
+      "name": "httpbin_form_interaction",
+      "status": "PASSED",
+      "url": "https://httpbin.org/post",
+      "contains_customer_name": true
+    }
+  ]
+}

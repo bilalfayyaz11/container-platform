@@ -1,0 +1,110 @@
+===== SELENIUM CONTAINER STATUS =====
+CONTAINER ID   IMAGE                               COMMAND                  CREATED         STATUS         PORTS                                                                                                                         NAMES
+5871b92a7c0e   selenium/standalone-chrome:latest   "/opt/bin/entry_poin…"   7 minutes ago   Up 7 minutes   4442-4443/tcp, 0.0.0.0:4444->4444/tcp, [::]:4444->4444/tcp, 5900/tcp, 9000/tcp, 0.0.0.0:7900->7900/tcp, [::]:7900->7900/tcp   selenium-chrome
+
+===== SELENIUM IMAGE =====
+selenium/standalone-chrome:latest   b4d4e3f64280       3.14GB          972MB   U    
+
+===== SELENIUM HUB STATUS =====
+{
+    "value": {
+        "nodes": [
+            {
+                "uri": "http://172.17.0.2:4444",
+                "heartbeatPeriod": 15000,
+                "slots": [
+                    {
+                        "id": {
+                            "hostId": "ffdb6cff-0963-4fad-b99f-58aa25934072",
+                            "id": "bc3303dc-bff7-46d5-acad-80822ab6cd88"
+                        },
+                        "lastStarted": "2026-06-17T16:51:52.944938185Z",
+                        "session": null,
+                        "stereotype": {
+                            "browserName": "chrome",
+                            "browserVersion": "148.0",
+                            "container:hostname": "5871b92a7c0e",
+                            "goog:chromeOptions": {
+                                "binary": "/usr/bin/google-chrome"
+                            },
+                            "platformName": "linux",
+                            "se:containerName": "5871b92a7c0e",
+                            "se:deleteSessionOnUi": true,
+                            "se:downloadsEnabled": true,
+                            "se:noVncPort": 7900,
+                            "se:vncEnabled": true
+                        }
+                    }
+                ],
+                "id": "ffdb6cff-0963-4fad-b99f-58aa25934072",
+                "sessionTimeout": 300000,
+                "version": "4.44.0 (revision da2039bd14*)",
+                "availability": "UP",
+                "maxSessions": 1,
+                "osInfo": {
+                    "name": "Linux",
+                    "version": "6.14.0-1018-aws",
+                    "arch": "amd64"
+                }
+            }
+        ],
+        "message": "Selenium Grid ready.",
+        "ready": true
+    }
+}
+
+===== CONTAINER RESOURCE USAGE =====
+CONTAINER ID   NAME              CPU %     MEM USAGE / LIMIT     MEM %     NET I/O          BLOCK I/O    PIDS
+5871b92a7c0e   selenium-chrome   1.26%     278.7MiB / 7.659GiB   3.55%     48.8MB / 1.1MB   0B / 160MB   78
+
+===== LAST 50 LOG LINES =====
+	... 44 more
+16:51:32.857 INFO [LocalNode.stopTimedOutSession] - Session id 84865830babec5627fad2220b67ae4ae timed out, stopping...
+16:51:32.986 INFO [SessionSlot.stop] - Stopping session 84865830babec5627fad2220b67ae4ae (reason: TIMEOUT)
+16:51:32.986 INFO [SessionSlot.stop] - Session stopped successfully: 84865830babec5627fad2220b67ae4ae
+16:51:32.990 INFO [LocalGridModel.release] - Releasing slot for session id 84865830babec5627fad2220b67ae4ae
+16:51:32.991 INFO [LocalSessionMap.removeWithReason] - Deleted session from local Session Map, Id: 84865830babec5627fad2220b67ae4ae, Node: http://172.17.0.2:4444, Reason: session timed out due to inactivity
+16:51:33.002 INFO [LocalDistributor.newSession] - Session request received by the Distributor: 
+ [Capabilities {browserName: chrome, goog:chromeOptions: {args: [--no-sandbox, --disable-dev-shm-usage], extensions: []}, pageLoadStrategy: normal}]
+16:51:33.852 INFO [LocalNode.newSession] - Session created by the Node. Id: 9bd142a4a8adb6019bd35ffdd5e219ba, Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:44511}, goog:processID: 650, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:51:33.856 INFO [LocalSessionMap.add] - Added session to local Session Map, Id: 9bd142a4a8adb6019bd35ffdd5e219ba, Node: http://172.17.0.2:4444
+16:51:33.859 INFO [LocalDistributor.newSession] - Session created by the Distributor. Id: 9bd142a4a8adb6019bd35ffdd5e219ba 
+ Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:44511}, goog:processID: 650, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:51:34.598 INFO [LocalNode.stopTimedOutSession] - Session id 9bd142a4a8adb6019bd35ffdd5e219ba is stopping on demand...
+16:51:34.598 INFO [SessionSlot.stop] - Stopping session 9bd142a4a8adb6019bd35ffdd5e219ba (reason: QUIT_COMMAND)
+16:51:34.601 INFO [SessionSlot.stop] - Session stopped successfully: 9bd142a4a8adb6019bd35ffdd5e219ba
+16:51:34.612 INFO [LocalSessionMap.removeWithReason] - Deleted session from local Session Map, Id: 9bd142a4a8adb6019bd35ffdd5e219ba, Node: http://172.17.0.2:4444, Reason: session closed normally (QUIT command)
+16:51:34.613 INFO [LocalGridModel.release] - Releasing slot for session id 9bd142a4a8adb6019bd35ffdd5e219ba
+16:51:35.582 INFO [LocalDistributor.newSession] - Session request received by the Distributor: 
+ [Capabilities {browserName: chrome, goog:chromeOptions: {args: [--no-sandbox, --disable-dev-shm-usage], extensions: []}, pageLoadStrategy: normal}]
+16:51:36.429 INFO [LocalNode.newSession] - Session created by the Node. Id: 61f08638e83cd6f8639aada8e369a21b, Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:35561}, goog:processID: 780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:51:36.436 INFO [LocalSessionMap.add] - Added session to local Session Map, Id: 61f08638e83cd6f8639aada8e369a21b, Node: http://172.17.0.2:4444
+16:51:36.441 INFO [LocalDistributor.newSession] - Session created by the Distributor. Id: 61f08638e83cd6f8639aada8e369a21b 
+ Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:35561}, goog:processID: 780, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:51:37.221 INFO [LocalNode.stopTimedOutSession] - Session id 61f08638e83cd6f8639aada8e369a21b is stopping on demand...
+16:51:37.221 INFO [SessionSlot.stop] - Stopping session 61f08638e83cd6f8639aada8e369a21b (reason: QUIT_COMMAND)
+16:51:37.222 INFO [SessionSlot.stop] - Session stopped successfully: 61f08638e83cd6f8639aada8e369a21b
+16:51:37.234 INFO [LocalGridModel.release] - Releasing slot for session id 61f08638e83cd6f8639aada8e369a21b
+16:51:37.238 INFO [LocalSessionMap.removeWithReason] - Deleted session from local Session Map, Id: 61f08638e83cd6f8639aada8e369a21b, Node: http://172.17.0.2:4444, Reason: session closed normally (QUIT command)
+16:51:50.117 INFO [LocalDistributor.newSession] - Session request received by the Distributor: 
+ [Capabilities {browserName: chrome, goog:chromeOptions: {args: [--no-sandbox, --disable-dev-shm-usage], extensions: []}, pageLoadStrategy: normal}]
+16:51:51.018 INFO [LocalNode.newSession] - Session created by the Node. Id: debcdd7369f22d7c7b8d4ce2cb579a74, Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:44419}, goog:processID: 911, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:51:51.020 INFO [LocalSessionMap.add] - Added session to local Session Map, Id: debcdd7369f22d7c7b8d4ce2cb579a74, Node: http://172.17.0.2:4444
+16:51:51.024 INFO [LocalDistributor.newSession] - Session created by the Distributor. Id: debcdd7369f22d7c7b8d4ce2cb579a74 
+ Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:44419}, goog:processID: 911, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:51:51.141 INFO [LocalNode.stopTimedOutSession] - Session id debcdd7369f22d7c7b8d4ce2cb579a74 is stopping on demand...
+16:51:51.141 INFO [SessionSlot.stop] - Stopping session debcdd7369f22d7c7b8d4ce2cb579a74 (reason: QUIT_COMMAND)
+16:51:51.141 INFO [SessionSlot.stop] - Session stopped successfully: debcdd7369f22d7c7b8d4ce2cb579a74
+16:51:51.150 INFO [LocalSessionMap.removeWithReason] - Deleted session from local Session Map, Id: debcdd7369f22d7c7b8d4ce2cb579a74, Node: http://172.17.0.2:4444, Reason: session closed normally (QUIT command)
+16:51:51.152 INFO [LocalGridModel.release] - Releasing slot for session id debcdd7369f22d7c7b8d4ce2cb579a74
+16:51:52.112 INFO [LocalDistributor.newSession] - Session request received by the Distributor: 
+ [Capabilities {browserName: chrome, goog:chromeOptions: {args: [--no-sandbox, --disable-dev-shm-usage], extensions: []}, pageLoadStrategy: normal}]
+16:51:52.945 INFO [LocalNode.newSession] - Session created by the Node. Id: 6dca6ac4a5c9b530c8231a27766a1c22, Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46275}, goog:processID: 1028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:51:52.947 INFO [LocalSessionMap.add] - Added session to local Session Map, Id: 6dca6ac4a5c9b530c8231a27766a1c22, Node: http://172.17.0.2:4444
+16:51:52.949 INFO [LocalDistributor.newSession] - Session created by the Distributor. Id: 6dca6ac4a5c9b530c8231a27766a1c22 
+ Caps: Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 148.0.7778.178, chrome: {chromedriverVersion: 148.0.7778.178 (d096af1c9e9..., userDataDir: /tmp/org.chromium.Chromium....}, fedcm:accounts: true, goog:chromeOptions: {debuggerAddress: localhost:46275}, goog:processID: 1028, networkConnectionEnabled: false, pageLoadStrategy: normal, platformName: linux, proxy: Proxy(), se:bidiEnabled: false, se:cdp: ws://172.17.0.2:4444/sessio..., se:cdpVersion: 148.0.7778.178, se:containerName: 5871b92a7c0e, se:deleteSessionOnUi: true, se:downloadsEnabled: true, se:noVncPort: 7900, se:vnc: ws://172.17.0.2:4444/sessio..., se:vncEnabled: true, se:vncLocalAddress: ws://172.17.0.2:7900, setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:extension:minPinLength: true, webauthn:extension:prf: true, webauthn:virtualAuthenticators: true}
+16:51:53.058 INFO [LocalNode.stopTimedOutSession] - Session id 6dca6ac4a5c9b530c8231a27766a1c22 is stopping on demand...
+16:51:53.058 INFO [SessionSlot.stop] - Stopping session 6dca6ac4a5c9b530c8231a27766a1c22 (reason: QUIT_COMMAND)
+16:51:53.059 INFO [SessionSlot.stop] - Session stopped successfully: 6dca6ac4a5c9b530c8231a27766a1c22
+16:51:53.068 INFO [LocalGridModel.release] - Releasing slot for session id 6dca6ac4a5c9b530c8231a27766a1c22
+16:51:53.071 INFO [LocalSessionMap.removeWithReason] - Deleted session from local Session Map, Id: 6dca6ac4a5c9b530c8231a27766a1c22, Node: http://172.17.0.2:4444, Reason: session closed normally (QUIT command)

@@ -1,0 +1,106 @@
+===== CONTAINER CHECK =====
+CONTAINER ID   IMAGE                               COMMAND                  CREATED         STATUS         PORTS                                                                                                                         NAMES
+5871b92a7c0e   selenium/standalone-chrome:latest   "/opt/bin/entry_poin…"   8 minutes ago   Up 8 minutes   4442-4443/tcp, 0.0.0.0:4444->4444/tcp, [::]:4444->4444/tcp, 5900/tcp, 9000/tcp, 0.0.0.0:7900->7900/tcp, [::]:7900->7900/tcp   selenium-chrome
+
+===== SELENIUM STATUS =====
+{
+    "value": {
+        "nodes": [
+            {
+                "uri": "http://172.17.0.2:4444",
+                "heartbeatPeriod": 15000,
+                "slots": [
+                    {
+                        "id": {
+                            "hostId": "ffdb6cff-0963-4fad-b99f-58aa25934072",
+                            "id": "bc3303dc-bff7-46d5-acad-80822ab6cd88"
+                        },
+                        "lastStarted": "2026-06-17T16:51:52.944938185Z",
+                        "session": null,
+                        "stereotype": {
+                            "browserName": "chrome",
+                            "browserVersion": "148.0",
+                            "container:hostname": "5871b92a7c0e",
+                            "goog:chromeOptions": {
+                                "binary": "/usr/bin/google-chrome"
+                            },
+                            "platformName": "linux",
+                            "se:containerName": "5871b92a7c0e",
+                            "se:deleteSessionOnUi": true,
+                            "se:downloadsEnabled": true,
+                            "se:noVncPort": 7900,
+                            "se:vncEnabled": true
+                        }
+                    }
+                ],
+                "id": "ffdb6cff-0963-4fad-b99f-58aa25934072",
+                "sessionTimeout": 300000,
+                "version": "4.44.0 (revision da2039bd14*)",
+                "availability": "UP",
+                "maxSessions": 1,
+                "osInfo": {
+                    "name": "Linux",
+                    "version": "6.14.0-1018-aws",
+                    "arch": "amd64"
+                }
+            }
+        ],
+        "message": "Selenium Grid ready.",
+        "ready": true
+    }
+}
+
+===== PYTHON TEST EXECUTION =====
+Starting Selenium Docker browser automation tests.
+============================================================
+Selenium Grid is ready.
+Connected to Selenium container.
+Opened Selenium homepage.
+Page title: Selenium
+Current URL: https://www.selenium.dev/
+Browser session closed.
+Connected to Selenium container for form test.
+Opened httpbin form page.
+Form submission URL: https://httpbin.org/post
+Browser session closed.
+============================================================
+{
+  "started_at": "2026-06-17T16:52:56.215176+00:00",
+  "finished_at": "2026-06-17T16:53:01.495746+00:00",
+  "selenium_url": "http://localhost:4444/wd/hub",
+  "total_tests": 2,
+  "passed": 2,
+  "failed": 0,
+  "results": [
+    {
+      "name": "selenium_homepage_title_check",
+      "status": "PASSED",
+      "title": "Selenium",
+      "url": "https://www.selenium.dev/"
+    },
+    {
+      "name": "httpbin_form_interaction",
+      "status": "PASSED",
+      "url": "https://httpbin.org/post",
+      "contains_customer_name": true
+    }
+  ]
+}
+
+===== REPORT CHECK =====
+Status: PASSED
+Generated:
+- test-report.json
+- test-report.html
+
+===== REQUIRED FILE CHECK =====
+PASS: selenium_test.py
+PASS: generate_report.py
+PASS: browser-screenshot.py
+PASS: browser-capabilities.py
+PASS: selenium-health-audit.sh
+PASS: selenium-results.json
+PASS: test-report.json
+PASS: test-report.html
+
+===== VALIDATION COMPLETE =====
